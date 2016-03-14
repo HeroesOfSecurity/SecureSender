@@ -1,0 +1,8 @@
+ g++  -g -Wall -Wextra -Iinclude -Ilib/mbedtls/include -c -o build/crypto.o src/crypto.cpp
+ g++  -g -Wall -Wextra -Iinclude -Ilib/mbedtls/include -c -o build/main.o src/main.cpp
+src/main.cpp:17:5: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char** argv) {
+     ^
+src/main.cpp:17:5: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ Linking...
+ g++  build/crypto.o build/main.o -o bin/crypto -Llib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 
