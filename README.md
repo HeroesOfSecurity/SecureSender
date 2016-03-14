@@ -1,10 +1,10 @@
 # SecureSender
 
-Overview
+### Overview
 
 Cyphered instant messaging and data sending application.
 
-Members
+### Members
 
 Kristián Jakubík
 Peter Lipčák
