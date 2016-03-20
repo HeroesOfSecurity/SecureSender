@@ -26,3 +26,4 @@
 *.exe
 *.out
 *.app
+/server/server_krypto/build/
