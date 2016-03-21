@@ -1,5 +1,5 @@
-CC := g++ # This is the main compiler
-CFLAGS := -g -Wall -Wextra
+CC := g++-4.8 # This is the main compiler
+CFLAGS := -g -std=c++11 -Wall -Wextra
 
 SRCDIR := src lib/simpleini
 BUILDDIR := build

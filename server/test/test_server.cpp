@@ -9,6 +9,8 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
+#include <vector>
+#include <iterator>
 // Tell CATCH to define its main function here
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
@@ -35,7 +37,15 @@ TEST_CASE("Authentication"){
 
 }
 
-TEST_CASE("Encryption/Decryption") {
+TEST_CASE("Get Online users") {
+    Server sev;
     string name("Jozko");
-
+    string psw("heslo");
+    sev.register_new_user("Peto", "heslo");
+    sev.register_new_user("Marek", "heslo");
+    vector<string> users = online_users(name);
+    CHECK(users.size() == 3);
+    for(auto user : users){
+        CHECK(user == "Jozko" || user == "Peto" || user == "Marek");
+    }
 }
