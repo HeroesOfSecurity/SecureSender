@@ -1,16 +1,16 @@
 CC := g++-4.8 # This is the main compiler
 CFLAGS := -g -std=c++11 -Wall -Wextra
 
-SRCDIR := src lib/simpleini
+SRCDIR := src
 BUILDDIR := build
 TARGET := bin/server
  
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
-SOURCES_TEST=test/test_server.cpp
+SOURCES_TEST=test/server_test.cpp
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 LIB := -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 -Llib/sqlite-autoconf-3110100/ -lsqlite3  
-INC := -Iinclude -Ilib/simpleini -I../initial_project/lib/mbedtls/include -Llib/sqlite-autoconf-3110100/
+INC := -Iinclude -I../initial_project/lib/mbedtls/include -Llib/sqlite-autoconf-3110100/
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."; 
