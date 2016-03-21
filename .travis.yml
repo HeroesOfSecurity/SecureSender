@@ -23,6 +23,7 @@ script:
 - cd initial_project/lib/mbedtls
 - make clean && make 
 - cd ../../.. && cd server/lib/sqlite-autoconf-3110100
-- make clean ./configure && make
+- autoreconf --force --install
+- make clean && ./configure && make
 - cd ../../
 - make tests && launch-tests
