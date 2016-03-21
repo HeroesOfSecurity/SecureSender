@@ -10,16 +10,30 @@
 
 #include <string>
 #include <vector>
+#include <set>
+#include <algorithm>
+
+#include "crypto.h"
+#include "dbhelper.h"
 
 class Server
 {
+private:
+    DBHelper* dbHelper;
+    Crypto ps;
+    std::set<std::string> all_online_users;
+    
 public:
+    
+    Server();
     
     /**
      * @brief This function tries to register new user to database
      * @param username username of new user
      * @param password password if new user
-     * @return status, if registration was succesful
+     * @return status, 0 if registration was succesful
+     *                 1 username exists
+     *                 2 password is weak
      */
     int register_new_user(std::string username, std::string password);
     

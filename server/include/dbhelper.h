@@ -26,8 +26,9 @@ public:
     DBHelper(std::string file_name);
     ~DBHelper();
     
-    int create_client(std::string username, std::string hash, std::string salt);
+    int create_client(Client client);
     Client get_client(std::string username);
+    bool client_exists(std::string username);
     vector<vector<string> > query(const char* query);
     
     

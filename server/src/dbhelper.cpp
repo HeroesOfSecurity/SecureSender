@@ -1,7 +1,8 @@
 
 #include "dbhelper.h"
+#include <cstddef>
 
-DBHelper::DBHelper(string file_name) {
+DBHelper::DBHelper(std::string file_name) {
     int rc;
 
     rc = sqlite3_open(file_name.c_str(), &db);
@@ -52,6 +53,23 @@ Client DBHelper::get_client(std::string username) {
     
 }
 
+
+bool DBHelper::client_exists(std::string username) {
+    
+    string sql = std::string("SELECT * from clients where username='") + username + "';";
+    
+    vector<vector<string> > result_set = query(sql.c_str());
+    
+    for(vector<vector<string> >::iterator it = result_set.begin(); it != result_set.end(); ++it) {
+        /*for(vector<string>::iterator iter = it->begin(); iter != it->end(); ++iter) {
+            cout << *iter << endl;
+        }*/
+        
+        return true;
+    }
+    return false;
+}
+
 vector<vector<string> > DBHelper::query(const char* query) {
 
     sqlite3_stmt *statement;
@@ -82,8 +100,8 @@ vector<vector<string> > DBHelper::query(const char* query) {
     return results;
 }
 
-int DBHelper::create_client(std::string username, std::string hash, std::string salt){
-    string sql = "INSERT INTO clients (username, hash, salt) VALUES('" + username + "','" + hash + "','" + salt + "');";
+int DBHelper::create_client(Client client){
+    string sql = "INSERT INTO clients (username, hash, salt) VALUES('" + client.get_username() + "','" + client.get_hash() + "','" + client.get_salt() + "');";
 
     sqlite3_stmt *insertStmt;
     cout << "Creating Insert Statement" << endl;
