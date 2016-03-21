@@ -20,8 +20,8 @@ install:
 
 # script to run after build (run tests, etc.)
 script: 
-- cd initial_project/lib/mbedtls-2.2.1
+- cd initial_project/lib/mbedtls
 - make clean && make 
-- cd ../.. && cd server/lib/sqlite-autoconf-3110100
+- cd ../../.. && cd server/lib/sqlite-autoconf-3110100
 - make clean && ./configure && make
 - make tests && launch-tests
