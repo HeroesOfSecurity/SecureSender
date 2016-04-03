@@ -27,8 +27,6 @@ int Server::register_new_user(std::string username, std::string password)
     return 0;
 }
 
-
-
 int Server::authenticate(std::string username, std::string password)
 {
     
