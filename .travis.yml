@@ -27,3 +27,6 @@ script:
 - make clean && ./configure && make
 - cd ../../
 - make tests && launch-tests
+- cd ../client
+- make clean && make
+- make tests && launch-tests
