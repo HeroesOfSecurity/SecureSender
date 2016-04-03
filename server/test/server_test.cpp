@@ -1,5 +1,5 @@
 /**
- * @file test_server.cpp
+ * @file server_test.cpp
  * @author Kristian Jakubik
  * @licence MIT Licence
  */
