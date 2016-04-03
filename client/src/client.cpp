@@ -1,21 +1,21 @@
 
 #include "client.h"
+#include "server.h"
+#include "client_server_connection.h"
 
-Client::Client(string username, string hash, string salt){
-    this->username = username;
-    this->hash = hash;
-    this->salt = salt;
+using namespace std;
+
+Client::Client(){
+    token = nullptr;
 }
 
-
-string Client::get_hash(){
-    return hash;
+int Client::sign_in(string username, string password){
+    Server s;
+    if(int value = s.authenticate(username, password))
+        return value;
+    ClientServerConnection conn;
+    token = "Token";
+    token = conn.generateToken();
+    return OK;
 }
 
-string Client::get_salt(){
-    return salt;
-}
-
-string Client::get_username(){
-    return username;
-}

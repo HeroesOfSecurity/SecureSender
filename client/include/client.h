@@ -11,13 +11,14 @@
 #include <string.h>
 #include <vector>
 
-enum Status {OK, NOK};
+enum Status {OK, W_USR, W_PSWD};
 
 class Client
 {
 private:
     std::string ip_address;
     std::string server_ip;
+    std::char *token;
     
 public:
     
@@ -36,7 +37,7 @@ public:
      * @param token from the server
      * @return status of the authentication
      */
-    int sign_in(std::string username, std::string password, char *status);
+    int sign_in(std::string username, std::string password);
     
     /**
      * @brief This function gives you list of online users.
