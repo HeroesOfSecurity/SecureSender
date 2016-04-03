@@ -8,8 +8,10 @@
 #ifndef CLIENT_H
 #define	CLIENT_H
 
+#include <string>
 #include <string.h>
 #include <vector>
+#include <chat.h>
 
 enum Status {OK, W_USR, W_PSWD};
 
@@ -18,7 +20,7 @@ class Client
 private:
     std::string ip_address;
     std::string server_ip;
-    std::char *token;
+    char *token;
     
 public:
     
@@ -56,5 +58,8 @@ public:
      * @brief This function logs off the user.
      */
     void disconnect();
+    Client();
+    ~Client();
 };
 
+#endif 

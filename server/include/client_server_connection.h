@@ -14,14 +14,14 @@
 class ClientServerConnection
 {
 private:
-    std::string token;
+    char* token;
 public:
     
     /**
      * @brief This function generates token
      * @return token
      */
-    std::string generateToken();
+    char* generateToken();
 };
 
 #endif	/* CLIENT_SERVER_CONNECTION_H */

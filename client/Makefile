@@ -10,11 +10,11 @@ SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 SOURCES_TEST=test/client_test.cpp
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 LIB := -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509  
-INC := -Iinclude -I../initial_project/lib/mbedtls/include
+INC := -Iinclude -I../initial_project/lib/mbedtls/include -I../server/include
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."; 
-	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
+	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB) ../build/server.o
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)
