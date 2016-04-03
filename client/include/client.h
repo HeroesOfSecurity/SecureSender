@@ -37,7 +37,7 @@ public:
      * @param token from the server
      * @return status of the authentication
      */
-    int sign_in(std::string username, std::string password);
+    int sign_in(std::string &username, std::string &password);
     
     /**
      * @brief This function gives you list of online users.
