@@ -7,17 +7,12 @@
 
 #include <cstdlib>
 
-#include "password_store.h"
-
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-
-    PasswordStore ps = PasswordStore();
-    ps.store_password_hash("lala");
     return 0;
 }
 
