@@ -1,78 +1,57 @@
 /* 
- * File:   crypto.h
+ * File:   password_store.h
  * Author: pedro1
  *
- * Created on March 15, 2016, 9:19 PM
+ * Created on March 20, 2016, 10:50 AM
  */
 
-#ifndef CRYPTO_H
-#define	CRYPTO_H
 
+
+#ifndef PASSWORD_STORE_H
+#define	PASSWORD_STORE_H
+
+#include <string>
+#include <cstring>
+
+
+#define SALT_SIZE 64
+#define HASH_SIZE 64
 
 
 class Crypto
 {
+private:
+    
+    int iteration_no_pbfkd2;
     
 public:
     
     Crypto();
     
     /**
-     * @brief This function creates HMAC for given message
-     * @param message message to hash
-     * @param key key for HMAC
-     * @param hash created hash
+     * @brief Function generates salt for password
+     * @return salt
      */
-    void message_hash_HMAC(const char* &message, const char* &key, const char* &hash);
+    int generate_salt(std::string& salt);
     
-    
-   
-    /**
-     * @brief This function creates RSA pair of keys, later public key will be sent to server to sign certificate
-     * @param public_key generated public key
-     * @param private_key generated private key
-     * @param seed seed for random number generator
-     */
-    void createRSAPair(const char* &public_key, const char* &private_key, const int seed);
-    
+    int perform_pbkdf2(std::string& password, std::string& salt, std::string& output_hash);
     
     
     /**
-     * @brief This function creates HMAC for password + SALT
-     * @param password password to hash
-     * @param salt salt
-     * @param key key for HMAC
-     * @param hash created hash
+     * @brief Function performs PBKFD2 algorithm on hash and stores it in INI file
+     * @return status
      */
-    void salt_and_password_hash_HMAC(const char* &password, const char* salt, const char* &key, const char* &hash);
-    
-    /**
-     * @brief This function encrypts given message with AES-256
-     * @param key key with size 256b for AES-256   
-     * @param inputData data to encrypt
-     * @param inputSize size of input data
-     * @param encData encrypted data
-     * @param encSize size of encrypted data(padding included)
-     * @param encIv initialization vector
-     */
-    void encrypt(unsigned char* key, const unsigned char* inputData, int inputSize, 
-                    unsigned char* encData, int & encSize, unsigned char * encIv);
+    int store_password_hash(std::string& salt);
     
     
     /**
-     * @brief This function decrypts encrypted message with AES-256
-     * @param key key with size 256b for AES-256 
-     * @param inputData data to decrypt
-     * @param inputSize size of input data
-     * @param decOutput decrypted data
-     * @param decIv initialization vector
+     * @brief This function computes SHA-512 hash on given string
+     * @param string string to hash
+     * @param sha_result hash of string
      */
-    void decrypt(unsigned char* key, const unsigned char * inputData, int inputSize,
-                    unsigned char * decOutput, unsigned char * decIv);
+    void hash(unsigned char *string, unsigned char* sha_result);
     
 };
 
-
-#endif	/* CRYPTO_H */
-
+#endif	/* PASSWORD_STORE_H */
 
