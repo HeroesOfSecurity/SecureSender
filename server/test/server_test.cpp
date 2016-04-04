@@ -23,12 +23,12 @@ TEST_CASE("Registration") {
     string psw("heslo");
     CHECK(s.register_new_user(name, psw) == 0);
     CHECK(s.register_new_user(name, "hesl") != 0);
-    for(int i = 0; i < 2000; i++){
-        CHECK(s.register_new_user(name + i, psw) == 0);
+    for(int i = 0; i < 500; i++){
+        CHECK(s.register_new_user(name + to_string(i), psw) == 0);
     }
 }
 
-/*TEST_CASE("Authentication"){
+TEST_CASE("Authentication"){
     string name("Jozko");
     string psw("heslo");
     CHECK(s.authenticate(name, psw) == 0);
@@ -37,7 +37,7 @@ TEST_CASE("Registration") {
 
 }
 
-TEST_CASE("Get Online users") {
+/*TEST_CASE("Get Online users") {
     Server sev;
     string name("Jozko");
     string psw("heslo");
