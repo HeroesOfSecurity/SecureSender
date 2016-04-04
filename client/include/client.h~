@@ -21,6 +21,7 @@ private:
     std::string ip_address;
     std::string server_ip;
     char *token;
+    Crypto crypto;
     
 public:
     
@@ -62,3 +63,4 @@ public:
     ~Client();
 };
 
+#endif 
