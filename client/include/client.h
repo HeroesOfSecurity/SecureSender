@@ -11,7 +11,8 @@
 #include <string>
 #include <string.h>
 #include <vector>
-#include <chat.h>
+#include "user.h"
+//#include <chat.h>
 
 enum Status {OK, W_USR, W_PSWD};
 
@@ -52,7 +53,7 @@ public:
      * @param user
      * @param status of the chat 
      */
-    Chat start_chat(User user, int *status);
+//    Chat start_chat(User user, int *status);
     
     /**
      * @brief This function logs off the user.

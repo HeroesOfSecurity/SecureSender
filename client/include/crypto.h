@@ -1,17 +1,28 @@
-/* 
- * File:   crypto.h
- * Author: pedro1
- *
- * Created on March 15, 2016, 9:19 PM
- */
 
 #ifndef CRYPTO_H
 #define	CRYPTO_H
 
 
+#include "mbedtls/gcm.h"
+#include "mbedtls/entropy.h"
+#include "mbedtls/ctr_drbg.h"
+
+
+#define TAG_LENGTH 128
+#define IV_LENGTH 16
+#define KEY_LENGTH 256
+
+//status
+#define SUCCESS 0
+#define AUTHENTICATION_FAILED 1
 
 class Crypto
 {
+private:
+
+    mbedtls_entropy_context entropy_ctx;
+    mbedtls_ctr_drbg_context ctr_drbg_ctx;
+    mbedtls_gcm_context gcm_ctx;
     
 public:
     
@@ -55,8 +66,7 @@ public:
      * @param encSize size of encrypted data(padding included)
      * @param encIv initialization vector
      */
-    void encrypt(unsigned char* key, const unsigned char* inputData, int inputSize, 
-                    unsigned char* encData, int & encSize, unsigned char * encIv);
+    void encrypt(const unsigned char* message, const unsigned char* add_data, unsigned char* enc_message);
     
     
     /**
@@ -67,9 +77,28 @@ public:
      * @param decOutput decrypted data
      * @param decIv initialization vector
      */
-    void decrypt(unsigned char* key, const unsigned char * inputData, int inputSize,
-                    unsigned char * decOutput, unsigned char * decIv);
+    void decrypt(const unsigned char * message, const unsigned char * add_data, unsigned char * dec_message);
     
+    
+    /**
+     * @brief This function encrypts message using GCM (encryption + authentication)
+     * @param key key with size 256b for AES-256   
+     * @param message data to encrypt
+     * @param add_data additional data
+     * @param enc_message this string will contain at the end of function encrypted data
+     */
+    void encrypt_msg(const unsigned char * key, const unsigned char* message, const unsigned char* add_data, unsigned char* enc_message);
+    
+    
+    /**
+     * @brief This function decrypts message using GCM, computes tag for received message and compare it with provided tag
+     * @param key key with size 256b for AES-256   
+     * @param message data to decrypt
+     * @param add_data additional data
+     * @param dec_message this string will contain at the end of function decrypted data
+     * @return status, 0 -> SUCCESS, AUTHENTICATION_FAILED -> tags are different, authentication has failed
+     */
+    int decrypt_msg(const unsigned char * key, const unsigned char * message, const unsigned char * add_data, unsigned char * dec_message);
 };
 
 
