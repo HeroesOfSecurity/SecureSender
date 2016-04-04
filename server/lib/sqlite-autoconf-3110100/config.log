@@ -399,7 +399,7 @@ configure:12362: $? = 0
 configure:12362: result: yes
 configure:12362: checking for fullfsync
 configure:12362: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccu03TOk.o: In function `main':
+/tmp/cchUSK3z.o: In function `main':
 /home/kristian/SecureSender/server/lib/sqlite-autoconf-3110100/conftest.c:59: undefined reference to `fullfsync'
 collect2: error: ld returned 1 exit status
 configure:12362: $? = 1
@@ -570,7 +570,7 @@ configure: failed program was:
 configure:12455: result: no
 configure:12489: checking for library containing readline
 configure:12520: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccvN4SxD.o: In function `main':
+/tmp/ccSq0drO.o: In function `main':
 /home/kristian/SecureSender/server/lib/sqlite-autoconf-3110100/conftest.c:40: undefined reference to `readline'
 collect2: error: ld returned 1 exit status
 configure:12520: $? = 1
@@ -669,7 +669,7 @@ configure: failed program was:
 configure:12537: result: no
 configure:12704: checking for library containing pthread_create
 configure:12735: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccegX6aJ.o: In function `main':
+/tmp/ccQCho7S.o: In function `main':
 /home/kristian/SecureSender/server/lib/sqlite-autoconf-3110100/conftest.c:40: undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 configure:12735: $? = 1
@@ -726,7 +726,7 @@ configure:12791: $? = 0
 configure:12808: result: none required
 configure:12831: checking for library containing dlopen
 configure:12862: gcc -o conftest -g -O2   conftest.c -lpthread  >&5
-/tmp/ccKtVzWT.o: In function `main':
+/tmp/ccWYQwU8.o: In function `main':
 /home/kristian/SecureSender/server/lib/sqlite-autoconf-3110100/conftest.c:40: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:12862: $? = 1
