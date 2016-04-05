@@ -34,11 +34,7 @@ Client DBHelper::get_client(std::string username) {
     
     vector<vector<string> > result_set = query(sql.c_str());
     
-    for(vector<vector<string> >::iterator it = result_set.begin(); it != result_set.end(); ++it) {
-        /*for(vector<string>::iterator iter = it->begin(); iter != it->end(); ++iter) {
-            cout << *iter << endl;
-        }*/
-        
+    for(vector<vector<string> >::iterator it = result_set.begin(); it != result_set.end(); ++it) {       
         string salt = it->back();
         it->pop_back();
         

@@ -51,6 +51,12 @@ public:
      * @return list of online users
      */
     std::vector<std::string> online_users(std::string username);
+
+    /**
+     * @brief This function add friend to the user
+     * @param name of the friend
+     */
+    void add_friend(std::string name);
 };
 
 

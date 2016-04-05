@@ -10,21 +10,23 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <string>
+#include <vector>
 
-using namespace std;
 class Client{
-    
-    string username;
-    string hash;
-    string salt;
+
+    Vector<std::string> friends;
+    std::string username;
+    std::string hash;
+    std::string salt;
     
 public:
     
-    Client(string username, string hash, string salt);
+    Client(std::string username, std::string hash, std::string salt);
     
-    string get_username();
-    string get_hash();
-    string get_salt();
+    void add_friend(std::string name);
+    std::string get_username();
+    std::string get_hash();
+    std::string get_salt();
     
 };
 
