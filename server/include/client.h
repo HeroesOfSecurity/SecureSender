@@ -14,7 +14,7 @@
 
 class Client{
 
-    Vector<std::string> friends;
+    std::vector<std::string> friends;
     std::string username;
     std::string hash;
     std::string salt;

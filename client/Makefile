@@ -6,15 +6,15 @@ BUILDDIR := build
 TARGET := bin/client
  
 SRCEXT := cpp
-SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
-SOURCES_TEST=test/client_test.cpp
+SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT) ! -name client.cpp)
+SOURCES_TEST=test/client_test.cpp $(filter-out src/main.cpp, $(SOURCES))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 LIB := -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509  
 INC := -Iinclude -I../initial_project/lib/mbedtls/include -I../server/include
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."; 
-	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB) ../build/server.o
+	@echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)

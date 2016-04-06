@@ -7,7 +7,7 @@ TARGET := bin/server
  
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
-SOURCES_TEST=test/server_test.cpp $(SOURCES)
+SOURCES_TEST=test/server_test.cpp $(filter-out src/main.cpp, $(SOURCES))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 LIB := -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 -Llib/sqlite-autoconf-3110100/ -lsqlite3  
 INC := -Iinclude -I../initial_project/lib/mbedtls/include -Llib/sqlite-autoconf-3110100/

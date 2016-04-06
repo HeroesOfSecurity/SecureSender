@@ -8,13 +8,17 @@
 #include "mbedtls/ctr_drbg.h"
 
 
-#define TAG_LENGTH 128
-#define IV_LENGTH 16
-#define KEY_LENGTH 256
+#define TAG_LENGTH 16
+#define IV_LENGTH 12
+#define KEY_LENGTH 32
+#define MAX_MESSAGE_SIZE 500
 
 //status
 #define SUCCESS 0
-#define AUTHENTICATION_FAILED 1
+#define ERR_AUTHENTICATION_FAILED 1
+#define ERR_GENERATE_IV 2
+#define ERR_MSG_SIZE 3
+
 
 class Crypto
 {
@@ -82,23 +86,40 @@ public:
     
     /**
      * @brief This function encrypts message using GCM (encryption + authentication)
-     * @param key key with size 256b for AES-256   
+     * @param key key with size 256b for AES-256 
+     * @param iv initializing vector   
      * @param message data to encrypt
+     * @param original_size size of message
      * @param add_data additional data
+     * @param add_data_size size of additional data
      * @param enc_message this string will contain at the end of function encrypted data
+     *  !!! string is allocated with "new" so you have to call "delete[]" at the end of string's usage
      */
-    void encrypt_msg(const unsigned char * key, const unsigned char* message, const unsigned char* add_data, unsigned char* enc_message);
+    void protect_msg(const unsigned char * key, const unsigned char * iv, const unsigned char* message, int original_size,
+            const unsigned char* add_data, int add_data_size, unsigned char** enc_message);
     
     
     /**
-     * @brief This function decrypts message using GCM, computes tag for received message and compare it with provided tag
-     * @param key key with size 256b for AES-256   
-     * @param message data to decrypt
+     * @brief This function decrypts message using GCM assuring integrity of data
+     * @param key key with size 256b for AES-256
+     * @param message data to decrypt {original_size(size of body) || iv || tag || body_of_msg}
      * @param add_data additional data
-     * @param dec_message this string will contain at the end of function decrypted data
-     * @return status, 0 -> SUCCESS, AUTHENTICATION_FAILED -> tags are different, authentication has failed
+     * @param dec_message this string will contain at the end of function decrypted data,
+     *  !!! string is allocated with "new" so you have to call "delete[]" at the end of string's usage
+     * @return status, SUCCESS -> unprotecting message was succesful
+     *                 ERR_AUTHENTICATION_FAILED -> tags are different, authentication has failed
+     *                 ERR_MSG_SIZE -> message is too big
      */
-    int decrypt_msg(const unsigned char * key, const unsigned char * message, const unsigned char * add_data, unsigned char * dec_message);
+    int unprotect_msg(const unsigned char * key, const unsigned char * message,
+            const unsigned char * add_data, unsigned char ** dec_message);
+    
+    
+    /**
+     * @brief This function generates random initialized vector with given size (in bytes)
+     * @param iv_length length of generated IV
+     * @return status, SUCCESS -> generating was succesful, ERR_GENERATE_IV -> fail
+     */
+    int generate_init_vector(size_t iv_length, unsigned char ** init_vector);
 };
 
 
