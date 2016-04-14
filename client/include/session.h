@@ -23,6 +23,7 @@ private:
 public:
 
     Session();
+    unsigned char *get_key() {return key;}
 };
 
 #endif	/* SESSION_H */

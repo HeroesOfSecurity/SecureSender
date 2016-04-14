@@ -49,12 +49,12 @@ int Server::authenticate(std::string username, std::string password)
         return 2;
     }
     
-    all_online_users.insert(username);
+    // add online user
     return 0;
 }
 
 
-std::vector<std::string> Server::online_users(std::string username)
+std::vector<online_user> Server::online_users(std::string username)
 {
     
     /*
@@ -73,10 +73,10 @@ std::vector<std::string> Server::online_users(std::string username)
             online_user_contacts.push_back(all_user_contacts[i]);
         }
     }*/
-    std::vector<std::string> output(all_online_users.size());
-    std::copy(all_online_users.begin(), all_online_users.end(), output.begin());
+    //std::vector<std::string> output(all_online_users.size());
+    //std::copy(all_online_users.begin(), all_online_users.end(), output.begin());
     
-    return output;
+    return online_users_;
 }
 
 void Server::add_friend(string name){

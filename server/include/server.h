@@ -16,7 +16,7 @@
 #include "dbhelper.h"
 #include "client.h"
 
-struct Online_User{
+typedef struct Online_User{
 std::string name;
 std::string ip;
 std::string token;
@@ -27,7 +27,7 @@ class Server
 private:
     DBHelper* dbHelper;
     Crypto ps;
-    std::vector<online_user> online_users;
+    std::vector<online_user> online_users_;
     
 public:
     
@@ -56,7 +56,7 @@ public:
      * @param username username for which we try to find online users
      * @return list of online users
      */
-    std::vector<std::string> online_users(std::string username);
+    std::vector<online_user> online_users(std::string username);
 
     /**
      * @brief This function add friend to the user
