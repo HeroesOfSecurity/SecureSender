@@ -10,18 +10,24 @@
 
 #include <string>
 #include <vector>
-#include <set>
 #include <algorithm>
 
 #include "crypto.h"
 #include "dbhelper.h"
+#include "client.h"
+
+struct Online_User{
+std::string name;
+std::string ip;
+std::string token;
+}online_user;
 
 class Server
 {
 private:
     DBHelper* dbHelper;
     Crypto ps;
-    std::set<std::string> all_online_users;
+    std::vector<online_user> online_users;
     
 public:
     

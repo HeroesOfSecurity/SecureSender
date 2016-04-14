@@ -102,7 +102,6 @@ cleanup:
 }
 
 
-
 int Crypto::store_password_hash(std::string& salt)    {
     return 2;
 }

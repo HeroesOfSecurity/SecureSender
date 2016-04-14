@@ -12,6 +12,7 @@
 #include <string.h>
 #include <vector>
 #include "user.h"
+#include "session.h"
 //#include <chat.h>
 
 enum Status {OK, W_USR, W_PSWD};
@@ -22,6 +23,7 @@ private:
     std::string ip_address;
     std::string server_ip;
     char *token;
+    Session session;
     
 public:
     

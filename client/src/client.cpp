@@ -4,11 +4,14 @@
 #include "client_server_connection.h"
 #include <iostream>
 #include <stdlib.h>
+#include <string>
+#include <session.h>
 
 using namespace std;
 
 Client::Client(){
     token = nullptr;
+    session = Session();
 }
 
 Client::~Client(){
@@ -16,11 +19,16 @@ Client::~Client(){
 }
 
 int Client::sign_in(string &username, string &password){
-    Server s;
-    if(int value = s.authenticate(username, password))
-        return value;
-    token = new char[username.length() + 10 * sizeof(char)];
-    memcpy(token, "token", 5 * sizeof(char));
+    //Pouzit JSON
+    string mes = "sing_in;" + username + ";" + password + ";";
+    Crypto c;
+    unsigned char* en_mes;
+    c.encrypt(session.get_key(), mes, "", en_mes);
+    //send
+    //wait for res
+    unsigned char* des_mes;
+    c.decrypt(session.get_key(), des_mes, "", mes);
+    //check for respond
     return OK;
 }
 

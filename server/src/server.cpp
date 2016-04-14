@@ -1,6 +1,6 @@
 #include "server.h"
 
-
+using namespace std;
 Server::Server(){
     dbHelper = new DBHelper(string("database.db"));
     ps = Crypto();
@@ -78,3 +78,8 @@ std::vector<std::string> Server::online_users(std::string username)
     
     return output;
 }
+
+void Server::add_friend(string name){
+    return;
+}
+
