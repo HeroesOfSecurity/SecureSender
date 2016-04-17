@@ -7,6 +7,8 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <qt5/QtCore/QCoreApplication>
+#include <include/client.h>
 
 using namespace std;
 
@@ -15,7 +17,8 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    cout << "Client main" << endl;
+    QCoreApplication a(argc, argv);
+    Client c(a);
     return 0;
 }
 

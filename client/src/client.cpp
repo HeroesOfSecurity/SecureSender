@@ -1,15 +1,20 @@
-
-#include "client.h"
-#include "server.h"
-#include "client_server_connection.h"
+#include <include/client.h>
+#include <include/server.h>
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include <session.h>
+#include <include/session.h>
+#include <qt5/QtNetwork/QTcpSocket>
+#include <qt5/QtCore/QCoreApplication>
+#include <qt5/QtNetwork/QHostAddress>
+#include <qt5/QtCore/QJsonArray>
+#include <qt5/QtCore/QJsonObject>
+#include <qt5/QtCore/QJsonDocument>
+#include <qt5/QtCore/QString>
 
 using namespace std;
 
-Client::Client(){
+Client::Client(QCoreApplication &a) : app(a){
     token = nullptr;
     session = Session();
 }
@@ -18,17 +23,38 @@ Client::~Client(){
     delete[] token;
 }
 
-int Client::sign_in(string &username, string &password){
-    //Pouzit JSON
-    string mes = "sing_in;" + username + ";" + password + ";";
-    Crypto c;
-    unsigned char* en_mes;
-    c.encrypt(session.get_key(), mes, "", en_mes);
-    //send
-    //wait for res
-    unsigned char* des_mes;
-    c.decrypt(session.get_key(), des_mes, "", mes);
-    //check for respond
-    return OK;
+void Client::connection(QTcpSocket &soc){
+    soc.connectToHost(QHostAddress(QString("127.0.0.1")), 9999);
+    if (!soc.waitForConnected()) {
+        std::cerr << "Could not connect to server";
+        exit(0);
+    }
 }
+
+void Client::send(QTcpSocket &soc, QJsonObject &mes){
+    QByteArray arr;
+    QDataStream str(&arr, QIODevice::WriteOnly);
+    str << mes;
+    soc.write(arr);
+    soc.waitForBytesWritten();
+}
+
+QJsonObject respond(QTcpSocket &soc){
+    soc.waitForReadyRead();
+    QDataStream u(&soc);
+    QJsonObject json();
+    u >> json;
+    return json;
+}
+
+int Client::sign_in(string &username, string &password){
+
+    QTcpSocket soc(app);
+    connection(soc);
+    QJsonArray mes = {QString("sign_in"), QString(username), QString(password)};
+    send(soc, mes);
+    QJsonObject json = respond(soc);
+    return json[0];
+}
+
 

@@ -14,15 +14,18 @@
 #include "user.h"
 #include "session.h"
 //#include <chat.h>
-
+#include <qt5/QtNetwork/QTcpSocket>
+#include <qt5/QtCore/QCoreApplication>
+#include <qt5/QtCore/QJsonObject>
 enum Status {OK, W_USR, W_PSWD};
 
 class Client
 {
 private:
+    QCoreApplication &app;
     std::string ip_address;
     std::string server_ip;
-    char *token;
+    unsigned char *token;
     Session session;
     
 public:
@@ -61,8 +64,15 @@ public:
      * @brief This function logs off the user.
      */
     void disconnect();
-    Client();
+
+    Client(QCoreApplication &a);
     ~Client();
+
+private:
+
+    void connection(QTcpSocket &soc);
+    void send(QTcpSocket &soc, QJsonObject &mes);
+    QJsonObject respond(QTcpSocket &soc);
 };
 
 #endif 
