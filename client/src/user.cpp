@@ -1,7 +1,1 @@
-#include "user.h"
-
-
-User::User()
-{
-    
-}
+#include <include/user.h>

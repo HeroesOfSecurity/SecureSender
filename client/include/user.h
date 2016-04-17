@@ -19,8 +19,8 @@ private:
     std::string certificate;
     
 public:
-    
-    User();
+    User() {};
+    User(std::string u, std::string ip) : username(u), ip_address(ip){ }
     
 };
 

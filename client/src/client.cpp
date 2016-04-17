@@ -41,19 +41,42 @@ void Client::send(QTcpSocket &soc, QJsonObject &mes){
 QJsonObject respond(QTcpSocket &soc){
     soc.waitForReadyRead();
     QDataStream u(&soc);
-    QJsonObject json();
-    u >> json;
-    return json;
+    QString str;
+    u >> str;
+    QJsonDocument d = QJsonDocument::fromJson(str.toUtf8());
+    return d.object();
 }
 
 int Client::sign_in(string &username, string &password){
 
-    QTcpSocket soc(app);
+    QTcpSocket soc(&app);
     connection(soc);
-    QJsonArray mes = {QString("sign_in"), QString(username), QString(password)};
+    QJsonObject mes;
+    mes.insert("function", QJsonValue(QString::fromStdString("sign_in")));
+    mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
     send(soc, mes);
     QJsonObject json = respond(soc);
-    return json[0];
+    return json["return"].toInt();
 }
 
+std::vector<User> Client::get_online_users(){
+    QTcpSocket soc(&app);
+    connection(soc);
+    QJsonObject mes;
+    mes.insert("function", QJsonValue(QString::fromStdString("sign_in")));
+    mes.insert("arguments", QJsonValue());
+    send(soc, mes);
+    QJsonObject json = respond(soc);
+    vector<User> v;
+    if(json["users"].isArray()){
+        QJsonArray users = json["users"].toArray();
+        foreach (QJsonValue user, users)
+        {
+            QJsonObject obj = user.toObject();
+            User u(obj["username"].toString().toStdString(), obj["ip_address"].toString().toStdString());
+            v.push_back(u);
+        }
+    }
+    return v;
+}
 
