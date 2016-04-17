@@ -1,22 +1,24 @@
 TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
-CONFIG -= qt
+CONFIG += c++11
 
-SOURCES += main.cpp \
-    src/client.cpp \
-    src/crypto.cpp \
-    src/main.cpp \
-    src/session.cpp \
-    src/user.cpp
+QT += network
 
-HEADERS += \
-    include/catch.hpp \
-    include/chat.h \
-    include/client.h \
-    include/client_server_connection.h \
-    include/crypto.h \
-    include/server.h \
-    include/session.h \
-    include/user.h
+SOURCES +=  src/client.cpp \
+            src/crypto.cpp \
+            src/main.cpp \
+            src/session.cpp \
+            src/user.cpp
 
+HEADERS +=  include/catch.hpp \
+            include/chat.h \
+            include/client.h \
+            include/client_server_connection.h \
+            include/crypto.h \
+            include/server.h \
+            include/session.h \
+            include/user.h
+
+INCLUDEPATH  += ../initial_project/lib/mbedtls/include
+LIBS += -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509

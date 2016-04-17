@@ -20,4 +20,5 @@ SOURCES += \
     src/server.cpp
 
 
-
+INCLUDEPATH  += include ../initial_project/lib/mbedtls/include -Llib/sqlite-autoconf-3110100/
+LIBS += -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 -Llib/sqlite-autoconf-3110100/ -lsqlite3

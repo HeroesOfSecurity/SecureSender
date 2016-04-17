@@ -1,5 +1,4 @@
 #include <include/client.h>
-#include <include/server.h>
 #include <iostream>
 #include <stdlib.h>
 #include <string>
