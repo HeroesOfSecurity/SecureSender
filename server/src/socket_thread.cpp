@@ -70,19 +70,20 @@ void SocketThread::readData()
     QJsonObject response;
     if(function.compare("sign_in") == 0)
     {
-        std::string username = arguments[0].toString().toUtf8().constData();
+        username = arguments[0].toString().toUtf8().constData();
         std::string password = arguments[1].toString().toUtf8().constData();
         int res = authenticate(username, password);
         if(res != SUCCESS)
         {
             return;
         }
-        online_users_.push_back(QString::fromStdString(username));
+        dbHelper->sign_in_client(QString::fromStdString(username));
         response["result"] = QJsonValue(res);
-    } else if(function.compare("online_users") == 0)
+        //authenticated = true;
+    } else if(/*authenticated && */function.compare("online_users") == 0)
     {
-        QVector<QString> users = online_users();
-        response["result"] = QJsonValue(QJsonArray::fromStringList(QStringList::fromVector(users)));
+        QList<QString> online_list = online_users();
+        response["result"] = QJsonValue(QJsonArray::fromStringList(online_list));
     }
 
     //send response back to client
@@ -91,6 +92,10 @@ void SocketThread::readData()
 
 void SocketThread::quit()
 {
+//    if(authenticated)
+//    {
+        dbHelper->logout_client(QString::fromStdString(username));
+//    }
     exit(0);
 }
 
@@ -148,7 +153,7 @@ int SocketThread::authenticate(std::string username, std::string password)
 }
 
 
-QVector<QString> SocketThread::online_users()
+QList<QString> SocketThread::online_users()
 {
 
     /*
@@ -170,9 +175,13 @@ QVector<QString> SocketThread::online_users()
     //std::vector<std::string> output(all_online_users.size());
     //std::copy(all_online_users.begin(), all_online_users.end(), output.begin());
 
-    return online_users_;
+    return dbHelper->get_online_users();
 }
 
+
+//NOT SUPPORTED YET
+/*
 void SocketThread::add_friend(string name){
     return;
 }
+*/

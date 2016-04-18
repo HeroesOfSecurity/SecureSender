@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   client.h
  * Author: peter
  *
@@ -14,16 +14,20 @@
 
 class Client{
 
-    std::vector<std::string> friends;
     std::string username;
     std::string hash;
     std::string salt;
-    
+
+    //friends not supported yet
+    //std::vector<std::string> friends;
+
 public:
     
     Client(std::string username, std::string hash, std::string salt);
-    
-    void add_friend(std::string name);
+
+    //NOT SUPPORTED YET
+    //void add_friend(std::string name);
+
     std::string get_username();
     std::string get_hash();
     std::string get_salt();

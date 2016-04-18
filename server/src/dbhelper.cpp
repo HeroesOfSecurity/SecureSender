@@ -112,3 +112,22 @@ int DBHelper::create_client(Client client){
         return 0;
     }
 }
+
+
+bool DBHelper::sign_in_client(QString username)
+{
+    online_users.push_back(username);
+    return true;
+}
+
+
+bool DBHelper::logout_client(QString username)
+{
+    online_users.removeOne(username);
+    return true;
+}
+
+QList<QString> DBHelper::get_online_users()
+{
+    return online_users;
+}

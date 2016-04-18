@@ -3,6 +3,12 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
 
+unix {
+        QMAKE_CXX = g++-4.8
+        QMAKE_CXXFLAGS += -std=c++11
+
+        LIBS += -ldl
+}
 
 HEADERS += \
     include/catch.hpp \

@@ -20,6 +20,8 @@ string Client::get_username(){
     return username;
 }
 
+/*
 void Client::add_friend(string name){
     return;
 }
+*/

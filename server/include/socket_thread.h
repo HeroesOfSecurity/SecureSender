@@ -31,7 +31,9 @@ class SocketThread : public QThread
 
     DBHelper* dbHelper;
     Crypto ps;
-    QVector<QString> online_users_;
+
+    std::string username = "skuska";
+    bool authenticated = false;
 
 public:
     explicit SocketThread(qintptr socket_ptr, DBHelper*& dbHelper, QObject *parent = 0);
@@ -62,7 +64,7 @@ public:
      * @brief This function returns list of online users
      * @return list of online users
      */
-    QVector<QString> online_users();
+    QList<QString> online_users();
 
     /**
      * @brief This function add friend to the user
