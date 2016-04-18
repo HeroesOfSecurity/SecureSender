@@ -1,7 +1,8 @@
+QT       += network
 TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
-CONFIG -= qt
+
 
 HEADERS += \
     include/catch.hpp \
@@ -10,14 +11,17 @@ HEADERS += \
     include/crypto.h \
     include/dbhelper.h \
     include/server.h \
-    include/sqlite3.h
+    include/sqlite3.h \
+    include/socket_thread.h \
+    include/constants.h
 
 SOURCES += \
     src/client.cpp \
     src/crypto.cpp \
     src/dbhelper.cpp \
     src/main.cpp \
-    src/server.cpp
+    src/server.cpp \
+    src/socket_thread.cpp
 
 
 INCLUDEPATH  += include ../initial_project/lib/mbedtls/include -Llib/sqlite-autoconf-3110100/

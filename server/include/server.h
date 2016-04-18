@@ -16,54 +16,70 @@
 #include "dbhelper.h"
 #include "client.h"
 
-typedef struct Online_User{
-std::string name;
-std::string ip;
-std::string token;
-}online_user;
+#include <QObject>
+#include <QTcpServer>
+#include <QThread>
 
-class Server
+
+
+class Server: public QTcpServer
 {
 private:
+
+    Q_OBJECT
+    qint16 port;
+
     DBHelper* dbHelper;
-    Crypto ps;
-    std::vector<online_user> online_users_;
     
 public:
     
     Server();
-    
-    /**
-     * @brief This function tries to register new user to database
-     * @param username username of new user
-     * @param password password if new user
-     * @return status, 0 if registration was succesful
-     *                 1 username exists
-     *                 2 password is weak
-     */
-    int register_new_user(std::string username, std::string password);
-    
-    /**
-     * @brief This function tries to authenticate user
-     * @param username username of authenticated user
-     * @param hash password hash of authenticated user
-     * @return status, if authentication was succesful
-     */
-    int authenticate(std::string username, std::string hash);
-    
-    /**
-     * @brief This function returns list of online users
-     * @param username username for which we try to find online users
-     * @return list of online users
-     */
-    std::vector<online_user> online_users(std::string username);
+    explicit Server(qint16 port, QObject *parent = 0);
+    ~Server();
+
 
     /**
-     * @brief This function add friend to the user
-     * @param name of the friend
+     * @brief start Method starts infinite loop
      */
-    void add_friend(std::string name);
+    void start();
+
+protected:
+
+    /**
+     * @brief incomingConnection Method is evoked when new connection is established
+     * Method starts new thread which handles communication with client
+     * @param handle socket descriptor assigned to new connection
+     */
+    void incomingConnection(qintptr handle) override;
+signals:
+
+    /**
+     * @brief finished Signal emited when the server was closed by error
+     */
+    void finished();
 };
+
+
+
+/**
+ * @brief The Controler class
+ * This class handles stdin and reads commands from stdin
+ * The only valid command is quit which ends the application
+ */
+class Controler : public QThread
+{
+    Q_OBJECT
+public:
+
+    Controler(QObject *parent = 0): QThread(parent)
+    { }
+
+    virtual ~Controler()
+    { }
+
+    void run() override;
+};
+
 
 
 #endif	/* SERVER_API_H */
