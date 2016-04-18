@@ -19,6 +19,7 @@ int main(int argc, char** argv) {
 
     QCoreApplication a(argc, argv);
     Client c(a);
+    cout << "Client finished" << endl;
     return 0;
 }
 

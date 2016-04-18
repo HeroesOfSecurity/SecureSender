@@ -38,7 +38,7 @@ void Client::send(QTcpSocket &soc, QJsonObject &mes){
     soc.waitForBytesWritten();
 }
 
-QJsonObject respond(QTcpSocket &soc){
+QJsonObject Client::respond(QTcpSocket &soc){
     soc.waitForReadyRead();
     QDataStream u(&soc);
     QString str;
