@@ -23,7 +23,7 @@ Client::~Client(){
 }
 
 void Client::connection(QTcpSocket &soc){
-    soc.connectToHost(QHostAddress(QString("127.0.0.1")), 9999);
+    soc.connectToHost(QHostAddress(QString("127.0.0.1")), 8081);
     if (!soc.waitForConnected()) {
         std::cerr << "Could not connect to server";
         exit(0);
@@ -63,7 +63,7 @@ std::vector<User> Client::get_online_users(){
     QTcpSocket soc(&app);
     connection(soc);
     QJsonObject mes;
-    mes.insert("function", QJsonValue(QString::fromStdString("sign_in")));
+    mes.insert("function", QJsonValue(QString::fromStdString("online_users")));
     mes.insert("arguments", QJsonValue());
     send(soc, mes);
     QJsonObject json = respond(soc);
