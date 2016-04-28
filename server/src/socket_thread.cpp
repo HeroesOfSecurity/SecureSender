@@ -36,16 +36,12 @@ SocketThread::~SocketThread()
 
 int SocketThread::readJsonObject(QString &function_type, QJsonArray &arguments)
 {
-    QDataStream input(socket);
-    QJsonObject json;
-    QString str;
-    input >> str;
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(str.toUtf8());
-    if (jsonDoc.isNull()) {
+    QByteArray arr = socket->readAll();
+    QJsonObject json = QJsonDocument::fromJson(arr).object();
+    if (json.isEmpty()) {
         return 1;
     }
-    QJsonObject jsonObject = jsonDoc.object();
-    if(!jsonObject["arguments"].isArray())
+    if(!json["arguments"].isArray())
     {
         return 1;
     }
@@ -62,7 +58,7 @@ void SocketThread::readData()
     //parse client request
     QString function;
     QJsonArray arguments;
-    if(!readJsonObject(function, arguments))
+    if(readJsonObject(function, arguments))
     {
         return;
     }
@@ -73,11 +69,9 @@ void SocketThread::readData()
         username = arguments[0].toString().toUtf8().constData();
         std::string password = arguments[1].toString().toUtf8().constData();
         int res = authenticate(username, password);
-        if(res != SUCCESS)
-        {
-            return;
-        }
-        dbHelper->sign_in_client(QString::fromStdString(username));
+        /*if(res == SUCCESS){
+            dbHelper->sign_in_client(QString::fromStdString(username));
+        }*/
         response["result"] = QJsonValue(res);
         //authenticated = true;
     } else if(/*authenticated && */function.compare("online_users") == 0)
@@ -87,7 +81,7 @@ void SocketThread::readData()
     }
 
     //send response back to client
-    send(*socket, response);
+    send(response);
 }
 
 void SocketThread::quit()
@@ -99,12 +93,13 @@ void SocketThread::quit()
     exit(0);
 }
 
-void SocketThread::send(QTcpSocket &soc, QJsonObject &mes)
+void SocketThread::send(QJsonObject &mes)
 {
     QByteArray arr;
-    QDataStream output(&arr, QIODevice::WriteOnly);
-    output << mes;
-    soc.write(arr);
+    QJsonDocument js(mes);
+    arr = js.toJson();
+    socket->write(arr);
+    socket->waitForBytesWritten();
 }
 
 int SocketThread::register_new_user(std::string username, std::string password)

@@ -76,7 +76,7 @@ private:
 
     int readJsonObject(QString &function_type, QJsonArray &arguments);
 
-    void send(QTcpSocket &soc, QJsonObject &mes);
+    void send(QJsonObject &mes);
 
 signals:
 

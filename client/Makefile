@@ -11,14 +11,14 @@ MAKEFILE      = Makefile
 ####### Compiler, tools and options
 
 CC            = gcc
-CXX           = g++
+CXX           = g++-4.8
 DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -DQT_NETWORK_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -m64 -pipe -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
-CXXFLAGS      = -m64 -pipe -g -std=c++0x -Wall -W -D_REENTRANT -fPIE $(DEFINES)
+CXXFLAGS      = -m64 -pipe -std=c++11 -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 INCPATH       = -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I. -I../initial_project/lib/mbedtls/include -I/usr/include/qt5 -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtCore -I.
 LINK          = g++
 LFLAGS        = -m64
-LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 -lQt5Network -L/usr/lib/x86_64-linux-gnu -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 -ldl -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509 -lQt5Network -L/usr/lib/x86_64-linux-gnu -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 QMAKE         = /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
@@ -101,7 +101,6 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/resolve_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_post.prf \
-		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/c++11.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qml_debug.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/declarative_debug.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/unix/gdb_dwarf_index.prf \
@@ -196,7 +195,6 @@ Makefile: client.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.co
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/resolve_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_post.prf \
-		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/c++11.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qml_debug.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/declarative_debug.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/unix/gdb_dwarf_index.prf \
@@ -261,7 +259,6 @@ Makefile: client.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.co
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/resolve_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_post.prf:
-/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/c++11.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qml_debug.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/declarative_debug.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/unix/gdb_dwarf_index.prf:
@@ -340,7 +337,21 @@ client.o: src/client.cpp include/client.h \
 		../initial_project/lib/mbedtls/include/mbedtls/aes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o client.o src/client.cpp
 
-crypto.o: src/crypto.cpp 
+crypto.o: src/crypto.cpp include/client.h \
+		include/user.h \
+		include/session.h \
+		include/crypto.h \
+		../initial_project/lib/mbedtls/include/mbedtls/gcm.h \
+		../initial_project/lib/mbedtls/include/mbedtls/cipher.h \
+		../initial_project/lib/mbedtls/include/mbedtls/config.h \
+		../initial_project/lib/mbedtls/include/mbedtls/check_config.h \
+		../initial_project/lib/mbedtls/include/mbedtls/entropy.h \
+		../initial_project/lib/mbedtls/include/mbedtls/sha512.h \
+		../initial_project/lib/mbedtls/include/mbedtls/sha256.h \
+		../initial_project/lib/mbedtls/include/mbedtls/threading.h \
+		../initial_project/lib/mbedtls/include/mbedtls/havege.h \
+		../initial_project/lib/mbedtls/include/mbedtls/ctr_drbg.h \
+		../initial_project/lib/mbedtls/include/mbedtls/aes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o crypto.o src/crypto.cpp
 
 main.o: src/main.cpp include/client.h \
@@ -360,10 +371,23 @@ main.o: src/main.cpp include/client.h \
 		../initial_project/lib/mbedtls/include/mbedtls/aes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o src/main.cpp
 
-session.o: src/session.cpp 
+session.o: src/session.cpp include/crypto.h \
+		../initial_project/lib/mbedtls/include/mbedtls/gcm.h \
+		../initial_project/lib/mbedtls/include/mbedtls/cipher.h \
+		../initial_project/lib/mbedtls/include/mbedtls/config.h \
+		../initial_project/lib/mbedtls/include/mbedtls/check_config.h \
+		../initial_project/lib/mbedtls/include/mbedtls/entropy.h \
+		../initial_project/lib/mbedtls/include/mbedtls/sha512.h \
+		../initial_project/lib/mbedtls/include/mbedtls/sha256.h \
+		../initial_project/lib/mbedtls/include/mbedtls/threading.h \
+		../initial_project/lib/mbedtls/include/mbedtls/havege.h \
+		../initial_project/lib/mbedtls/include/mbedtls/ctr_drbg.h \
+		../initial_project/lib/mbedtls/include/mbedtls/aes.h \
+		include/session.h \
+		include/user.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o session.o src/session.cpp
 
-user.o: src/user.cpp 
+user.o: src/user.cpp include/user.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o user.o src/user.cpp
 
 ####### Install

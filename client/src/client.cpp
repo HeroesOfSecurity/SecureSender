@@ -23,7 +23,7 @@ Client::~Client(){
 }
 
 void Client::connection(QTcpSocket &soc){
-    soc.connectToHost(QHostAddress(QString("147.251.47.70")), 8081);
+    soc.connectToHost(QHostAddress(QString("127.0.0.1")), 8082);
     if (!soc.waitForConnected()) {
         std::cerr << "Could not connect to server";
         exit(0);
@@ -32,19 +32,17 @@ void Client::connection(QTcpSocket &soc){
 
 void Client::send(QTcpSocket &soc, QJsonObject &mes){
     QByteArray arr;
-    QDataStream str(&arr, QIODevice::WriteOnly);
-    str << mes;
+    QJsonDocument js(mes);
+    arr = js.toJson();
     soc.write(arr);
     soc.waitForBytesWritten();
 }
 
 QJsonObject Client::respond(QTcpSocket &soc){
     soc.waitForReadyRead();
-    QDataStream u(&soc);
-    QString str;
-    u >> str;
-    QJsonDocument d = QJsonDocument::fromJson(str.toUtf8());
-    return d.object();
+    QByteArray arr = soc.readAll();
+    QJsonObject json = QJsonDocument::fromJson(arr).object();
+    return json;
 }
 
 int Client::sign_in(string &username, string &password){
@@ -56,7 +54,7 @@ int Client::sign_in(string &username, string &password){
     connection(soc);
     send(soc, mes);
     QJsonObject json = respond(soc);
-    return json["return"].toInt();
+    return json["result"].toInt();
 }
 
 std::vector<User> Client::get_online_users(){

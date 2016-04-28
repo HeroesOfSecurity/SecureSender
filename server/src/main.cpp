@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     cout << "Server main" << endl;
     QCoreApplication application(argc, argv);
 
-    Server server((qint16) 8081, &application); //create new server
+    Server server((qint16) 8082, &application); //create new server
     server.start(); //start new server
     std::cout << "Started" << std::endl;
 
