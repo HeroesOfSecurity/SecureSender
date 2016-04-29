@@ -8,16 +8,6 @@
 #include "dbhelper.h"
 #include <crypto.h>
 
-
-
-typedef struct Online_User{
-std::string name;
-std::string ip;
-std::string token;
-}online_user;
-
-
-
 /**
  * @brief The SocketThread class
  * This class represents handler of single connection to client.
@@ -64,7 +54,7 @@ public:
      * @brief This function returns list of online users
      * @return list of online users
      */
-    QList<QString> online_users();
+    QList<online_user> online_users();
 
     /**
      * @brief This function add friend to the user

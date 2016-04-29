@@ -17,13 +17,23 @@
 #include <QList>
 #include <QString>
 #include <string>
+#include <QString>
+#include <QNetworkAddressEntry>
+
+typedef struct Online_User{
+QString name;
+QHostAddress ip;
+QString token;
+}online_user;
+
+
 
 using namespace std;
 
 class DBHelper {
     
     sqlite3 *db;
-    QList<QString> online_users;
+    QList<online_user> online_users;
 
 public:
     
@@ -35,9 +45,9 @@ public:
     bool client_exists(std::string username);
     vector<vector<string> > query(const char* query);
 
-    bool sign_in_client(QString username);
+    bool sign_in_client(QString username, QHostAddress ip);
     bool logout_client(QString username);
-    QList<QString> get_online_users();
+    QList<online_user> get_online_users();
 };
 
 #endif	/* DBHELPER_H */

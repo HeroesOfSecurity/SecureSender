@@ -69,15 +69,15 @@ void SocketThread::readData()
         username = arguments[0].toString().toUtf8().constData();
         std::string password = arguments[1].toString().toUtf8().constData();
         int res = authenticate(username, password);
-        /*if(res == SUCCESS){
-            dbHelper->sign_in_client(QString::fromStdString(username));
-        }*/
+        if(res == SUCCESS){
+            dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
+        }
         response["result"] = QJsonValue(res);
         //authenticated = true;
     } else if(/*authenticated && */function.compare("online_users") == 0)
     {
-        QList<QString> online_list = online_users();
-        response["result"] = QJsonValue(QJsonArray::fromStringList(online_list));
+        QList<online_user> online_list = online_users();
+        //response["result"] = QJsonValue(QJsonArray::fromVariantList(online_list));
     }
 
     //send response back to client
@@ -148,7 +148,7 @@ int SocketThread::authenticate(std::string username, std::string password)
 }
 
 
-QList<QString> SocketThread::online_users()
+QList<online_user> SocketThread::online_users()
 {
 
     /*

@@ -114,20 +114,24 @@ int DBHelper::create_client(Client client){
 }
 
 
-bool DBHelper::sign_in_client(QString username)
+bool DBHelper::sign_in_client(QString username, QHostAddress ip)
 {
-    online_users.push_back(username);
+    online_user user;
+    user.name = username;
+    user.ip = ip;
+    user.token = QString("token");
+    online_users.push_back(user);
     return true;
 }
 
 
 bool DBHelper::logout_client(QString username)
 {
-    online_users.removeOne(username);
+    //online_users.removeOne(username);
     return true;
 }
 
-QList<QString> DBHelper::get_online_users()
+QList<online_user> DBHelper::get_online_users()
 {
     return online_users;
 }
