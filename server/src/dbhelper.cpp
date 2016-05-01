@@ -14,7 +14,7 @@ DBHelper::DBHelper(std::string file_name) {
         printf("Opened database successfully\n");
     }
 
-    string createQuery = "CREATE TABLE IF NOT EXISTS clients (username varchar(20) PRIMARY KEY, hash varchar(32) NOT NULL, salt varchar(32) NOT NULL);";
+    string createQuery = "CREATE TABLE IF NOT EXISTS clients (username varchar(20) PRIMARY KEY, hash varchar(64) NOT NULL, salt varchar(64) NOT NULL);";
     sqlite3_stmt *createStmt;
     cout << "Creating Table Statement" << endl;
     sqlite3_prepare_v2(db, createQuery.c_str(), createQuery.size(), &createStmt, NULL);
@@ -43,7 +43,7 @@ Client DBHelper::get_client(std::string username) {
         
         string username = it->back();
         it->pop_back();
-        
+
         return Client(username,hash,salt);
     }
     

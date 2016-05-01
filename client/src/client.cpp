@@ -45,6 +45,18 @@ QJsonObject Client::respond(QTcpSocket &soc){
     return json;
 }
 
+int Client::sign_up(string username, string password){
+    QTcpSocket soc(&app);
+    QJsonObject mes;
+    mes.insert("function", QJsonValue(QString::fromStdString("sign_up")));
+    mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
+    connection(soc);
+    send(soc, mes);
+    QJsonObject json = respond(soc);
+    return json["result"].toInt();
+}
+
+
 int Client::sign_in(string &username, string &password){
 
     QTcpSocket soc(&app);

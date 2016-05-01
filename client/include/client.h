@@ -36,7 +36,7 @@ public:
      * @param password
      * @ret status of the registration
      */
-    void sign_up(std::string username, std::string password, int *status);
+    int sign_up(std::string username, std::string password);
     
     /**
      * @brief This function log in user on the server.

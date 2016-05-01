@@ -34,18 +34,22 @@ Crypto::Crypto() {
 
 }
 
-int Crypto::perform_pbkdf2(std::string& password, std::string& salt, std::string& output_hash)
+int Crypto::perform_pbkdf2(std::string& password, unsigned char* salt, std::string& output_hash)
 {
     int ret;
     mbedtls_md_context_t ctx;
     
     mbedtls_md_init(&ctx);
-      
+    unsigned char hash[64];
     ret = mbedtls_pkcs5_pbkdf2_hmac(&ctx, (const unsigned char *)password.c_str(),
-                       strlen(password.c_str()), (const unsigned char *)salt.c_str(),
-                       strlen(salt.c_str()),
+                       strlen(password.c_str()), salt,
+                       SALT_SIZE,
                        iteration_no_pbfkd2,
-                       HASH_SIZE, (unsigned char *)output_hash.c_str());
+                       HASH_SIZE, hash);
+    for(int i = 0; i < 64; i++)
+        output_hash.append((const char*)&hash[i]);
+    //cout << "HASH: "<< output_hash << endl;
+
     
     if(ret != 0)
     {
@@ -61,7 +65,7 @@ int Crypto::perform_pbkdf2(std::string& password, std::string& salt, std::string
 
 
 
-int Crypto::generate_salt(std::string& salt) {
+int Crypto::generate_salt(unsigned char* salt) {
     int i, k, ret;
     mbedtls_ctr_drbg_context ctr_drbg;
     mbedtls_entropy_context entropy;
@@ -78,12 +82,11 @@ int Crypto::generate_salt(std::string& salt) {
     mbedtls_ctr_drbg_set_prediction_resistance(&ctr_drbg, MBEDTLS_CTR_DRBG_PR_OFF);
 
 
-    ret = mbedtls_ctr_drbg_random(&ctr_drbg, (unsigned char*)salt.c_str(), SALT_SIZE);
+    ret = mbedtls_ctr_drbg_random(&ctr_drbg, salt, SALT_SIZE);
     if (ret != 0) {
         mbedtls_printf("failed!\n");
         goto cleanup;
     }
-    printf("%s\n", salt.c_str());
 
     mbedtls_printf("Generating %ldkb of data... %04.1f" \
                 "%% done\r", (long) (sizeof (buf) * k / 1024), (100 * (float) (i + 1)) / k);
@@ -102,9 +105,6 @@ cleanup:
 }
 
 
-int Crypto::store_password_hash(std::string& salt)    {
-    return 2;
-}
 
 void Crypto::hash(unsigned char *fileContent, unsigned char* sha_result)    {
      mbedtls_sha512(fileContent, strlen((const char*)fileContent), sha_result, 0);

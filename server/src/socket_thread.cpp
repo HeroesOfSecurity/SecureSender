@@ -45,7 +45,6 @@ int SocketThread::readJsonObject(QString &function_type, QJsonArray &arguments)
     {
         return 1;
     }
-
     function_type = json["function"].toString();
     arguments = json["arguments"].toArray();
     return 0;
@@ -64,10 +63,20 @@ void SocketThread::readData()
     }
 
     QJsonObject response;
-    if(function.compare("sign_in") == 0)
+    if(function.compare("sign_up") == 0){
+       username = arguments[0].toString().toUtf8().constData();
+       string password = arguments[1].toString().toUtf8().constData();
+       int res = register_new_user(username, password);
+       if (res == SUCCESS){
+           dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
+       }
+       response["result"] = QJsonValue(res);
+       send(response);
+    }
+    else if(function.compare("sign_in") == 0)
     {
         username = arguments[0].toString().toUtf8().constData();
-        std::string password = arguments[1].toString().toUtf8().constData();
+        string password = arguments[1].toString().toUtf8().constData();
         int res = authenticate(username, password);
         if(res == SUCCESS){
             dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
@@ -109,15 +118,21 @@ int SocketThread::register_new_user(std::string username, std::string password)
         return 1;
     }
 
-    std::string salt;
+    unsigned char salt[SALT_SIZE];
     ps.generate_salt(salt);
 
     //generate hash
     std::string hash;
     ps.perform_pbkdf2(password, salt, hash);
-
+    /*cout << "Heslo:" << password << endl;
+    cout << "Salt:" <<  salt << endl;
+    cout << "Hash:" << hash << endl;*/
+    string s_salt;
+    for(int i = 0; i < 64; i++)
+        s_salt.append((const char*) &salt[i]);
     //insert user to database
-    Client new_client = Client(username, hash, salt);
+    cout << "Salt:" <<  s_salt << endl;
+    Client new_client = Client(username, hash, s_salt);
     dbHelper->create_client(new_client);
     return 0;
 }
@@ -135,10 +150,10 @@ int SocketThread::authenticate(std::string username, std::string password)
 
     //generate hash
     std::string hash;
-    ps.perform_pbkdf2(password, salt, hash);
+    ps.perform_pbkdf2(password, (unsigned char*)salt.c_str(), hash);
 
     //compare generated hash with hash in DB
-    std::string saved_hash = client.get_salt();
+    std::string saved_hash = client.get_hash();
     if(hash != saved_hash)
     {
         return ERR_AUTHENTICATE;

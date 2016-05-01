@@ -10,6 +10,7 @@ Server::Server(){
 
 Server::Server(qint16 port, QObject *parent) : QTcpServer(parent), port(port)
 {
+    dbHelper = new DBHelper(string("database.db"));
     qDebug() << "Server is created";
 }
 

@@ -32,16 +32,9 @@ public:
      * @brief Function generates salt for password
      * @return salt
      */
-    int generate_salt(std::string& salt);
+    int generate_salt(unsigned char *salt);
     
-    int perform_pbkdf2(std::string& password, std::string& salt, std::string& output_hash);
-    
-    
-    /**
-     * @brief Function performs PBKFD2 algorithm on hash and stores it in INI file
-     * @return status
-     */
-    int store_password_hash(std::string& salt);
+    int perform_pbkdf2(std::string& password, unsigned char *salt, std::string& output_hash);
     
     
     /**

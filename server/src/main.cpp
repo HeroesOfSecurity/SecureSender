@@ -33,6 +33,7 @@ int main(int argc, char** argv) {
     QObject::connect(&controller, SIGNAL(finished()), &application, SLOT(quit())); //connect signal from controller
     QObject::connect(&server, SIGNAL(finished()), &application, SLOT(quit()));
     controller.start(); //start controller
+
     return application.exec(); //start application event loop
 }
 
