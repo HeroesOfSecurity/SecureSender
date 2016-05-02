@@ -129,7 +129,7 @@ int SocketThread::register_new_user(std::string username, std::string password)
     cout << "Hash:" << hash << endl;*/
     string s_salt;
     for(int i = 0; i < 64; i++)
-        s_salt.append((const char*) &salt[i]);
+        s_salt.push_back(salt[i]);
     //insert user to database
     cout << "Salt:" <<  s_salt << endl;
     Client new_client = Client(username, hash, s_salt);

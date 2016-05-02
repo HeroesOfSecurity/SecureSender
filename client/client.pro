@@ -15,7 +15,9 @@ SOURCES +=  src/client.cpp \
             src/crypto.cpp \
             src/main.cpp \
             src/session.cpp \
-            src/user.cpp
+            src/user.cpp \
+    src/command_parser.cpp \
+    src/command_parser.cpp
 
 HEADERS +=  include/catch.hpp \
             include/chat.h \
@@ -24,7 +26,8 @@ HEADERS +=  include/catch.hpp \
             include/crypto.h \
             include/server.h \
             include/session.h \
-            include/user.h
+            include/user.h \
+    include/command_parser.h
 
 INCLUDEPATH  += ../initial_project/lib/mbedtls/include
 LIBS += -L../initial_project/lib/mbedtls/library -lmbedcrypto -lmbedtls -lmbedx509

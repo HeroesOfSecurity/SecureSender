@@ -8,7 +8,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <qt5/QtCore/QCoreApplication>
-#include <include/client.h>
+#include <include/command_parser.h>
 
 using namespace std;
 
@@ -17,7 +17,13 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    QCoreApplication a(argc, argv);
+    QCoreApplication app(argc, argv);
+
+    CmdParser cmd_parser(&app);
+    QObject::connect(&cmd_parser, SIGNAL(finished()), &app, SLOT(quit()));
+    cmd_parser.start();
+    return app.exec();
+    /*
     Client c(a);
     int value = 100;
     string name("peto");
@@ -26,7 +32,7 @@ int main(int argc, char** argv) {
     value = c.sign_up(name, psw);
     //value = c.sign_in(name, psw);
     cout << "hodnota: " << value << endl;
-    cout << "Client finished" << endl;
-    return 0;
+    cout << "Client finished" << endl;*/
+    //return 0;
 }
 

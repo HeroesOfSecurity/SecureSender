@@ -11,6 +11,7 @@
 #include <string>
 #include <string.h>
 #include <vector>
+#include <QTcpServer>
 #include "user.h"
 #include "session.h"
 //#include <chat.h>
@@ -19,16 +20,47 @@
 #include <qt5/QtCore/QJsonObject>
 enum Status {OK, W_USR, W_PSWD};
 
+
+#define SERVER_IP "127.0.0.1"
+#define SERVER_PORT 8082
+
+
 class Client
 {
 private:
-    QCoreApplication &app;
+    QObject &parent;
+
+    //socket with server
+    QTcpSocket *server_soc;
+
     std::string ip_address;
     std::string server_ip;
     unsigned char *token;
-    Session session;
-    
+
+
 public:
+
+    //Client();
+    Client(QObject &a);
+    ~Client();
+
+
+
+    /**
+     * @brief This function connects client to server
+     * @return true -> connection succesful, false -> fail
+     */
+    bool connect_to_server();
+
+    /**
+     * @brief This function disconnects client from server
+     */
+    void disconnect();
+
+    /**
+     * @brief This function tells you if you're connected
+     */
+    bool is_connected();
     
     /**
      * @brief This function registers new user on the server.
@@ -60,19 +92,15 @@ public:
      */
 //    Chat start_chat(User user, int *status);
     
-    /**
-     * @brief This function logs off the user.
-     */
-    void disconnect();
 
-    Client(QCoreApplication &a);
-    ~Client();
+
 
 private:
 
-    void connection(QTcpSocket &soc);
-    void send(QTcpSocket &soc, QJsonObject &mes);
-    QJsonObject respond(QTcpSocket &soc);
+    void send(QJsonObject &mes);
+    QJsonObject respond();
+
+
 };
 
 #endif 

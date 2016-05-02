@@ -8,23 +8,35 @@
 #ifndef SESSION_H
 #define	SESSION_H
 
-#include <include/user.h>
-#include <include/crypto.h>
+/*
+#include <QObject>
+#include <QThread>
+#include <QTcpSocket>
+#include <QHostAddress>
 
-class Session
+
+//#include <include/user.h>
+//#include <include/crypto.h>
+
+class SessionThread  : public QThread
 {
 private:
-    
-    User session_user; 
-    unsigned char *key;
-    
-    Crypto crypto;
-    
+    Q_OBJECT
+
+    //qintptr sock_ptr;
+    QTcpSocket *socket;
+
 public:
 
-    Session();
-    unsigned char *get_key() {return key;}
-};
+    explicit SessionThread(qintptr socket_ptr, QObject *parent = 0);
 
+    void run() override;
+
+    void readData();
+
+    void quit();
+
+};
+*/
 #endif	/* SESSION_H */
 

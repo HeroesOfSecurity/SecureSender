@@ -2,7 +2,7 @@
 #include <include/session.h>
 #include <cstring>
 
-
+/*
 Session::Session()
 {
     mbedtls_entropy_context entropy_ctx;
@@ -17,3 +17,6 @@ Session::Session()
     
     //mbedtls_ctr_drbg_random(&ctr_drbg_ctx, key, KEY_LENGTH);
 }
+
+*/
+

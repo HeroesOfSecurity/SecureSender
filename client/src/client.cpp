@@ -13,70 +13,97 @@
 
 using namespace std;
 
-Client::Client(QCoreApplication &a) : app(a){
+/*
+Client::Client() : server_soc(nullptr){
     token = nullptr;
     session = Session();
+}*/
+
+
+Client::Client(QObject &par) : parent(par), server_soc(nullptr){
+    token = nullptr;
 }
+
 
 Client::~Client(){
     delete[] token;
 }
 
-void Client::connection(QTcpSocket &soc){
-    soc.connectToHost(QHostAddress(QString("127.0.0.1")), 8082);
-    if (!soc.waitForConnected()) {
-        std::cerr << "Could not connect to server";
-        exit(0);
+bool Client::connect_to_server()
+{
+    server_soc = new QTcpSocket(&parent);
+    server_soc->connectToHost(QHostAddress(QString(SERVER_IP)), SERVER_PORT);
+    if (!server_soc->waitForConnected()) {
+        qDebug() << "Could not connect to server";
+        return false;
     }
+    qDebug() << "Connection to server SUCCESFUL";
+    return true;
 }
 
-void Client::send(QTcpSocket &soc, QJsonObject &mes){
-    QByteArray arr;
-    QJsonDocument js(mes);
-    arr = js.toJson();
-    soc.write(arr);
-    soc.waitForBytesWritten();
+
+void Client::disconnect()
+{
+    if(is_connected())
+    {
+        server_soc->disconnectFromHost();
+        delete server_soc;
+        server_soc = nullptr;
+        qDebug() << "Disconnected from server";
+    }
+
 }
 
-QJsonObject Client::respond(QTcpSocket &soc){
-    soc.waitForReadyRead();
-    QByteArray arr = soc.readAll();
-    QJsonObject json = QJsonDocument::fromJson(arr).object();
-    return json;
-}
-
-int Client::sign_up(string username, string password){
-    QTcpSocket soc(&app);
-    QJsonObject mes;
-    mes.insert("function", QJsonValue(QString::fromStdString("sign_up")));
-    mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
-    connection(soc);
-    send(soc, mes);
-    QJsonObject json = respond(soc);
-    return json["result"].toInt();
+bool Client::is_connected()
+{
+    return server_soc->state() == QTcpSocket::ConnectedState;
 }
 
 
 int Client::sign_in(string &username, string &password){
 
-    QTcpSocket soc(&app);
     QJsonObject mes;
     mes.insert("function", QJsonValue(QString::fromStdString("sign_in")));
     mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
-    connection(soc);
-    send(soc, mes);
-    QJsonObject json = respond(soc);
-    return json["result"].toInt();
+    send(mes);
+    QJsonObject json = respond();
+    int res = json["result"].toInt();
+    if(res)
+    {
+        qDebug() << "Authentication failed";
+    } else
+    {
+        qDebug() << "You have been authenticated";
+    }
+    return res;
 }
 
+
+int Client::sign_up(string username, string password){
+    QJsonObject mes;
+    mes.insert("function", QJsonValue(QString::fromStdString("sign_up")));
+    mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
+    send(mes);
+    QJsonObject json = respond();
+    int res = json["result"].toInt();
+    if(res)
+    {
+        qDebug() << "Can't create account";
+    } else
+    {
+
+        qDebug() << "Account has been created";
+    }
+    return res;
+}
+
+
 std::vector<User> Client::get_online_users(){
-    QTcpSocket soc(&app);
     QJsonObject mes;
     mes.insert("function", QJsonValue(QString::fromStdString("online_users")));
     mes.insert("arguments", QJsonValue());
-    connection(soc);
-    send(soc, mes);
-    QJsonObject json = respond(soc);
+    send(mes);
+    QJsonObject json = respond();
     vector<User> v;
     if(json["users"].isArray()){
         QJsonArray users = json["users"].toArray();
@@ -88,5 +115,20 @@ std::vector<User> Client::get_online_users(){
         }
     }
     return v;
+}
+
+void Client::send(QJsonObject &mes){
+    QByteArray arr;
+    QJsonDocument js(mes);
+    arr = js.toJson();
+    server_soc->write(arr);
+    server_soc->waitForBytesWritten();
+}
+
+QJsonObject Client::respond(){
+    server_soc->waitForReadyRead();
+    QByteArray arr = server_soc->readAll();
+    QJsonObject json = QJsonDocument::fromJson(arr).object();
+    return json;
 }
 

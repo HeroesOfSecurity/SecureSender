@@ -47,7 +47,7 @@ int Crypto::perform_pbkdf2(std::string& password, unsigned char* salt, std::stri
                        iteration_no_pbfkd2,
                        HASH_SIZE, hash);
     for(int i = 0; i < 64; i++)
-        output_hash.append((const char*)&hash[i]);
+        output_hash.push_back(hash[i]);
     //cout << "HASH: "<< output_hash << endl;
 
     
