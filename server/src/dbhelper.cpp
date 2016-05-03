@@ -1,6 +1,6 @@
-
 #include "dbhelper.h"
 #include <cstddef>
+#include <exception>
 
 DBHelper::DBHelper(std::string file_name) {
     int rc;
@@ -21,7 +21,7 @@ DBHelper::DBHelper(std::string file_name) {
     cout << "Stepping Table Statement" << endl;
     if (sqlite3_step(createStmt) != SQLITE_DONE) cout << "Didn't Create Table!" << endl;
     else cout << "Table created" << endl;
-
+    sqlite3_finalize(createStmt);
 }
 
 DBHelper::~DBHelper() {
@@ -30,89 +30,48 @@ DBHelper::~DBHelper() {
 
 Client DBHelper::get_client(std::string username) {
     
-    string sql = std::string("SELECT * from clients where username='") + username + "';";
-    
-    vector<vector<string> > result_set = query(sql.c_str());
-    
-    for(vector<vector<string> >::iterator it = result_set.begin(); it != result_set.end(); ++it) {       
-        string salt = it->back();
-        it->pop_back();
-        
-        string hash = it->back();
-        it->pop_back();
-        
-        string username = it->back();
-        it->pop_back();
-
-        return Client(username,hash,salt);
+    string createQuery = std::string("SELECT * from clients where username= ?;");
+    sqlite3_stmt *createStmt;
+    sqlite3_prepare_v2(db, createQuery.c_str(), createQuery.size(), &createStmt, NULL);
+    sqlite3_bind_text(createStmt, 1, username.c_str(), username.length(), nullptr);
+    if (sqlite3_step(createStmt) != SQLITE_ROW) {
+            sqlite3_finalize(createStmt);
+            throw myDBException();
     }
-    
+    Client client((const char*)sqlite3_column_text(createStmt, 0), (const char*)sqlite3_column_text(createStmt, 1), (const char*)sqlite3_column_text(createStmt, 2));
+    sqlite3_finalize(createStmt);
+    return client;
 }
 
-
-bool DBHelper::client_exists(std::string username) {
-    
-    string sql = std::string("SELECT * from clients where username='") + username + "';";
-    
-    vector<vector<string> > result_set = query(sql.c_str());
-    
-    for(vector<vector<string> >::iterator it = result_set.begin(); it != result_set.end(); ++it) {
-        /*for(vector<string>::iterator iter = it->begin(); iter != it->end(); ++iter) {
-            cout << *iter << endl;
-        }*/
-        
-        return true;
+bool DBHelper::client_exists(string username){
+    try{
+        get_client(username);
+    }catch(myDBException &ex){
+        return false;
     }
-    return false;
-}
-
-vector<vector<string> > DBHelper::query(const char* query) {
-
-    sqlite3_stmt *statement;
-    vector<vector<string> > results;
-
-    if (sqlite3_prepare_v2(db, query, -1, &statement, 0) == SQLITE_OK) {
-        int cols = sqlite3_column_count(statement);
-        int result = 0;
-        while (true) {
-            result = sqlite3_step(statement);
-
-            if (result == SQLITE_ROW) {
-                vector<string> values;
-                for (int col = 0; col < cols; col++) {
-                    values.push_back((char*) sqlite3_column_text(statement, col));
-                }
-                results.push_back(values);
-            } else {
-                break;
-            }
-        }
-        sqlite3_finalize(statement);
-    }
-
-    string error = sqlite3_errmsg(db);
-    if (error != "not an error") cout << query << " " << error << endl;
-
-    return results;
+    return true;
 }
 
 int DBHelper::create_client(Client client){
-    string sql = "INSERT INTO clients (username, hash, salt) VALUES('" + client.get_username() + "','" + client.get_hash() + "','" + client.get_salt() + "');";
-
+    string createQuery = string("INSERT INTO clients (username, hash, salt) VALUES(?,?,?);");
     sqlite3_stmt *insertStmt;
     cout << "Creating Insert Statement" << endl;
-    sqlite3_prepare(db, sql.c_str(), sql.size(), &insertStmt, NULL);
+    sqlite3_prepare_v2(db, createQuery.c_str(), createQuery.size(), &insertStmt, NULL);
+    sqlite3_bind_text(insertStmt, 1, client.get_username().c_str(), client.get_username().length(), nullptr);
+    sqlite3_bind_text(insertStmt, 2, client.get_hash().c_str(), client.get_hash().length(), nullptr);
+    sqlite3_bind_text(insertStmt, 3, client.get_salt().c_str(), client.get_salt().length(), nullptr);
     cout << "Stepping Insert Statement" << endl;
     if (sqlite3_step(insertStmt) != SQLITE_DONE) {
-        cout << "Didn't create client!" << endl; 
+        cout << "Didn't create client!" << endl;
+        sqlite3_finalize(insertStmt);
         return 1;
     }
     else {
         cout << "Client created!!!";
+        sqlite3_finalize(insertStmt);
         return 0;
     }
 }
-
 
 bool DBHelper::sign_in_client(QString username, QHostAddress ip)
 {

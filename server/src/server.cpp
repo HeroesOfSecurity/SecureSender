@@ -11,6 +11,13 @@ Server::Server(){
 Server::Server(qint16 port, QObject *parent) : QTcpServer(parent), port(port)
 {
     dbHelper = new DBHelper(string("database.db"));
+    Client c("ahoj", "hash", "salt");
+    dbHelper->create_client(c);
+    bool a = dbHelper->client_exists("ahoj");
+    if(!a)
+        cout << "Jmeno" << endl;
+    else
+        cout << "NIE" << endl;
     qDebug() << "Server is created";
 }
 

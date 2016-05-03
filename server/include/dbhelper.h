@@ -19,6 +19,7 @@
 #include <string>
 #include <QString>
 #include <QNetworkAddressEntry>
+#include <stdexcept>
 
 typedef struct Online_User{
 QString name;
@@ -26,7 +27,12 @@ QHostAddress ip;
 QString token;
 }online_user;
 
-
+class myDBException : public std::exception{
+    virtual const char* what() const throw()
+    {
+      return "User is not in db";
+    }
+};
 
 using namespace std;
 

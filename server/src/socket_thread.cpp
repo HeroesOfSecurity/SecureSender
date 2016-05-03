@@ -111,6 +111,7 @@ void SocketThread::send(QJsonObject &mes)
     socket->waitForBytesWritten();
 }
 
+
 int SocketThread::register_new_user(std::string username, std::string password)
 {
     if(dbHelper->client_exists(username))
