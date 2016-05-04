@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls
+CMAKE_SOURCE_DIR = /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls
+CMAKE_BINARY_DIR = /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -E cmake_progress_start /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls/CMakeFiles /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls/tests/CMakeFiles/progress.marks
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls/CMakeFiles 0
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -E cmake_progress_start /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls/CMakeFiles /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls/tests/CMakeFiles/progress.marks
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_aes.cbc.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.cbc.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.cbc.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_aes.cbc.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ test_suite_aes.cbc: tests/CMakeFiles/test_suite_aes.cbc.dir/rule
 
 # fast build rule for target.
 test_suite_aes.cbc/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/build
 .PHONY : test_suite_aes.cbc/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_aes.cfb.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.cfb.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.cfb.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_aes.cfb.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ test_suite_aes.cfb: tests/CMakeFiles/test_suite_aes.cfb.dir/rule
 
 # fast build rule for target.
 test_suite_aes.cfb/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/build
 .PHONY : test_suite_aes.cfb/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_aes.ecb.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.ecb.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.ecb.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_aes.ecb.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ test_suite_aes.ecb: tests/CMakeFiles/test_suite_aes.ecb.dir/rule
 
 # fast build rule for target.
 test_suite_aes.ecb/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/build
 .PHONY : test_suite_aes.ecb/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_aes.rest.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.rest.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_aes.rest.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_aes.rest.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ test_suite_aes.rest: tests/CMakeFiles/test_suite_aes.rest.dir/rule
 
 # fast build rule for target.
 test_suite_aes.rest/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/build
 .PHONY : test_suite_aes.rest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_arc4.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_arc4.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_arc4.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_arc4.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ test_suite_arc4: tests/CMakeFiles/test_suite_arc4.dir/rule
 
 # fast build rule for target.
 test_suite_arc4/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/build
 .PHONY : test_suite_arc4/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_asn1write.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_asn1write.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_asn1write.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_asn1write.dir/rule
 
 # Convenience name for target.
@@ -230,12 +230,12 @@ test_suite_asn1write: tests/CMakeFiles/test_suite_asn1write.dir/rule
 
 # fast build rule for target.
 test_suite_asn1write/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/build
 .PHONY : test_suite_asn1write/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_base64.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_base64.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_base64.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_base64.dir/rule
 
 # Convenience name for target.
@@ -244,12 +244,12 @@ test_suite_base64: tests/CMakeFiles/test_suite_base64.dir/rule
 
 # fast build rule for target.
 test_suite_base64/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/build
 .PHONY : test_suite_base64/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_blowfish.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_blowfish.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_blowfish.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_blowfish.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ test_suite_blowfish: tests/CMakeFiles/test_suite_blowfish.dir/rule
 
 # fast build rule for target.
 test_suite_blowfish/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/build
 .PHONY : test_suite_blowfish/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_camellia.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_camellia.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_camellia.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_camellia.dir/rule
 
 # Convenience name for target.
@@ -272,12 +272,12 @@ test_suite_camellia: tests/CMakeFiles/test_suite_camellia.dir/rule
 
 # fast build rule for target.
 test_suite_camellia/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/build
 .PHONY : test_suite_camellia/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ccm.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ccm.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ccm.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ccm.dir/rule
 
 # Convenience name for target.
@@ -286,12 +286,12 @@ test_suite_ccm: tests/CMakeFiles/test_suite_ccm.dir/rule
 
 # fast build rule for target.
 test_suite_ccm/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/build
 .PHONY : test_suite_ccm/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.aes.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.aes.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.aes.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.aes.dir/rule
 
 # Convenience name for target.
@@ -300,12 +300,12 @@ test_suite_cipher.aes: tests/CMakeFiles/test_suite_cipher.aes.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.aes/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/build
 .PHONY : test_suite_cipher.aes/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.arc4.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.arc4.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.arc4.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.arc4.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ test_suite_cipher.arc4: tests/CMakeFiles/test_suite_cipher.arc4.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.arc4/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/build
 .PHONY : test_suite_cipher.arc4/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.blowfish.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.blowfish.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.blowfish.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.blowfish.dir/rule
 
 # Convenience name for target.
@@ -328,12 +328,12 @@ test_suite_cipher.blowfish: tests/CMakeFiles/test_suite_cipher.blowfish.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.blowfish/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/build
 .PHONY : test_suite_cipher.blowfish/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.camellia.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.camellia.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.camellia.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.camellia.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ test_suite_cipher.camellia: tests/CMakeFiles/test_suite_cipher.camellia.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.camellia/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/build
 .PHONY : test_suite_cipher.camellia/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.ccm.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.ccm.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.ccm.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.ccm.dir/rule
 
 # Convenience name for target.
@@ -356,12 +356,12 @@ test_suite_cipher.ccm: tests/CMakeFiles/test_suite_cipher.ccm.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.ccm/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/build
 .PHONY : test_suite_cipher.ccm/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.des.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.des.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.des.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.des.dir/rule
 
 # Convenience name for target.
@@ -370,12 +370,12 @@ test_suite_cipher.des: tests/CMakeFiles/test_suite_cipher.des.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.des/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/build
 .PHONY : test_suite_cipher.des/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.gcm.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.gcm.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.gcm.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.gcm.dir/rule
 
 # Convenience name for target.
@@ -384,12 +384,12 @@ test_suite_cipher.gcm: tests/CMakeFiles/test_suite_cipher.gcm.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.gcm/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/build
 .PHONY : test_suite_cipher.gcm/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.null.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.null.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.null.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.null.dir/rule
 
 # Convenience name for target.
@@ -398,12 +398,12 @@ test_suite_cipher.null: tests/CMakeFiles/test_suite_cipher.null.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.null/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/build
 .PHONY : test_suite_cipher.null/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_cipher.padding.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.padding.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_cipher.padding.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_cipher.padding.dir/rule
 
 # Convenience name for target.
@@ -412,12 +412,12 @@ test_suite_cipher.padding: tests/CMakeFiles/test_suite_cipher.padding.dir/rule
 
 # fast build rule for target.
 test_suite_cipher.padding/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/build
 .PHONY : test_suite_cipher.padding/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ctr_drbg.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ctr_drbg.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ctr_drbg.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ctr_drbg.dir/rule
 
 # Convenience name for target.
@@ -426,12 +426,12 @@ test_suite_ctr_drbg: tests/CMakeFiles/test_suite_ctr_drbg.dir/rule
 
 # fast build rule for target.
 test_suite_ctr_drbg/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/build
 .PHONY : test_suite_ctr_drbg/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_debug.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_debug.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_debug.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_debug.dir/rule
 
 # Convenience name for target.
@@ -440,12 +440,12 @@ test_suite_debug: tests/CMakeFiles/test_suite_debug.dir/rule
 
 # fast build rule for target.
 test_suite_debug/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/build
 .PHONY : test_suite_debug/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_des.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_des.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_des.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_des.dir/rule
 
 # Convenience name for target.
@@ -454,12 +454,12 @@ test_suite_des: tests/CMakeFiles/test_suite_des.dir/rule
 
 # fast build rule for target.
 test_suite_des/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/build
 .PHONY : test_suite_des/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_dhm.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_dhm.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_dhm.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_dhm.dir/rule
 
 # Convenience name for target.
@@ -468,12 +468,12 @@ test_suite_dhm: tests/CMakeFiles/test_suite_dhm.dir/rule
 
 # fast build rule for target.
 test_suite_dhm/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/build
 .PHONY : test_suite_dhm/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ecdh.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecdh.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecdh.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ecdh.dir/rule
 
 # Convenience name for target.
@@ -482,12 +482,12 @@ test_suite_ecdh: tests/CMakeFiles/test_suite_ecdh.dir/rule
 
 # fast build rule for target.
 test_suite_ecdh/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/build
 .PHONY : test_suite_ecdh/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ecdsa.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecdsa.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecdsa.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ecdsa.dir/rule
 
 # Convenience name for target.
@@ -496,12 +496,12 @@ test_suite_ecdsa: tests/CMakeFiles/test_suite_ecdsa.dir/rule
 
 # fast build rule for target.
 test_suite_ecdsa/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/build
 .PHONY : test_suite_ecdsa/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ecjpake.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecjpake.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecjpake.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ecjpake.dir/rule
 
 # Convenience name for target.
@@ -510,12 +510,12 @@ test_suite_ecjpake: tests/CMakeFiles/test_suite_ecjpake.dir/rule
 
 # fast build rule for target.
 test_suite_ecjpake/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/build
 .PHONY : test_suite_ecjpake/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ecp.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecp.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ecp.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ecp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ test_suite_ecp: tests/CMakeFiles/test_suite_ecp.dir/rule
 
 # fast build rule for target.
 test_suite_ecp/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/build
 .PHONY : test_suite_ecp/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_entropy.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_entropy.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_entropy.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_entropy.dir/rule
 
 # Convenience name for target.
@@ -538,12 +538,12 @@ test_suite_entropy: tests/CMakeFiles/test_suite_entropy.dir/rule
 
 # fast build rule for target.
 test_suite_entropy/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/build
 .PHONY : test_suite_entropy/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_error.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_error.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_error.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_error.dir/rule
 
 # Convenience name for target.
@@ -552,12 +552,12 @@ test_suite_error: tests/CMakeFiles/test_suite_error.dir/rule
 
 # fast build rule for target.
 test_suite_error/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/build
 .PHONY : test_suite_error/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes128_de.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes128_de.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes128_de.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes128_de.dir/rule
 
 # Convenience name for target.
@@ -566,12 +566,12 @@ test_suite_gcm.aes128_de: tests/CMakeFiles/test_suite_gcm.aes128_de.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes128_de/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build
 .PHONY : test_suite_gcm.aes128_de/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes128_en.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes128_en.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes128_en.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes128_en.dir/rule
 
 # Convenience name for target.
@@ -580,12 +580,12 @@ test_suite_gcm.aes128_en: tests/CMakeFiles/test_suite_gcm.aes128_en.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes128_en/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build
 .PHONY : test_suite_gcm.aes128_en/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes192_de.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes192_de.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes192_de.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes192_de.dir/rule
 
 # Convenience name for target.
@@ -594,12 +594,12 @@ test_suite_gcm.aes192_de: tests/CMakeFiles/test_suite_gcm.aes192_de.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes192_de/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build
 .PHONY : test_suite_gcm.aes192_de/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes192_en.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes192_en.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes192_en.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes192_en.dir/rule
 
 # Convenience name for target.
@@ -608,12 +608,12 @@ test_suite_gcm.aes192_en: tests/CMakeFiles/test_suite_gcm.aes192_en.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes192_en/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build
 .PHONY : test_suite_gcm.aes192_en/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes256_de.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes256_de.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes256_de.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes256_de.dir/rule
 
 # Convenience name for target.
@@ -622,12 +622,12 @@ test_suite_gcm.aes256_de: tests/CMakeFiles/test_suite_gcm.aes256_de.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes256_de/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build
 .PHONY : test_suite_gcm.aes256_de/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.aes256_en.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes256_en.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.aes256_en.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.aes256_en.dir/rule
 
 # Convenience name for target.
@@ -636,12 +636,12 @@ test_suite_gcm.aes256_en: tests/CMakeFiles/test_suite_gcm.aes256_en.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.aes256_en/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build
 .PHONY : test_suite_gcm.aes256_en/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_gcm.camellia.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.camellia.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_gcm.camellia.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_gcm.camellia.dir/rule
 
 # Convenience name for target.
@@ -650,12 +650,12 @@ test_suite_gcm.camellia: tests/CMakeFiles/test_suite_gcm.camellia.dir/rule
 
 # fast build rule for target.
 test_suite_gcm.camellia/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/build
 .PHONY : test_suite_gcm.camellia/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/rule
 
 # Convenience name for target.
@@ -664,12 +664,12 @@ test_suite_hmac_drbg.misc: tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/rule
 
 # fast build rule for target.
 test_suite_hmac_drbg.misc/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build
 .PHONY : test_suite_hmac_drbg.misc/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/rule
 
 # Convenience name for target.
@@ -678,12 +678,12 @@ test_suite_hmac_drbg.no_reseed: tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.
 
 # fast build rule for target.
 test_suite_hmac_drbg.no_reseed/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build
 .PHONY : test_suite_hmac_drbg.no_reseed/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/rule
 
 # Convenience name for target.
@@ -692,12 +692,12 @@ test_suite_hmac_drbg.nopr: tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/rule
 
 # fast build rule for target.
 test_suite_hmac_drbg.nopr/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build
 .PHONY : test_suite_hmac_drbg.nopr/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/rule
 
 # Convenience name for target.
@@ -706,12 +706,12 @@ test_suite_hmac_drbg.pr: tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/rule
 
 # fast build rule for target.
 test_suite_hmac_drbg.pr/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build
 .PHONY : test_suite_hmac_drbg.pr/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_md.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_md.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_md.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_md.dir/rule
 
 # Convenience name for target.
@@ -720,12 +720,12 @@ test_suite_md: tests/CMakeFiles/test_suite_md.dir/rule
 
 # fast build rule for target.
 test_suite_md/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/build
 .PHONY : test_suite_md/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_mdx.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_mdx.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_mdx.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_mdx.dir/rule
 
 # Convenience name for target.
@@ -734,12 +734,12 @@ test_suite_mdx: tests/CMakeFiles/test_suite_mdx.dir/rule
 
 # fast build rule for target.
 test_suite_mdx/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/build
 .PHONY : test_suite_mdx/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/rule
 
 # Convenience name for target.
@@ -748,12 +748,12 @@ test_suite_memory_buffer_alloc: tests/CMakeFiles/test_suite_memory_buffer_alloc.
 
 # fast build rule for target.
 test_suite_memory_buffer_alloc/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build
 .PHONY : test_suite_memory_buffer_alloc/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_mpi.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_mpi.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_mpi.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_mpi.dir/rule
 
 # Convenience name for target.
@@ -762,12 +762,12 @@ test_suite_mpi: tests/CMakeFiles/test_suite_mpi.dir/rule
 
 # fast build rule for target.
 test_suite_mpi/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/build
 .PHONY : test_suite_mpi/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pem.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pem.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pem.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pem.dir/rule
 
 # Convenience name for target.
@@ -776,12 +776,12 @@ test_suite_pem: tests/CMakeFiles/test_suite_pem.dir/rule
 
 # fast build rule for target.
 test_suite_pem/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/build
 .PHONY : test_suite_pem/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pk.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pk.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pk.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pk.dir/rule
 
 # Convenience name for target.
@@ -790,12 +790,12 @@ test_suite_pk: tests/CMakeFiles/test_suite_pk.dir/rule
 
 # fast build rule for target.
 test_suite_pk/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/build
 .PHONY : test_suite_pk/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pkcs1_v21.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkcs1_v21.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkcs1_v21.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pkcs1_v21.dir/rule
 
 # Convenience name for target.
@@ -804,12 +804,12 @@ test_suite_pkcs1_v21: tests/CMakeFiles/test_suite_pkcs1_v21.dir/rule
 
 # fast build rule for target.
 test_suite_pkcs1_v21/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/build
 .PHONY : test_suite_pkcs1_v21/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pkcs5.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkcs5.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkcs5.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pkcs5.dir/rule
 
 # Convenience name for target.
@@ -818,12 +818,12 @@ test_suite_pkcs5: tests/CMakeFiles/test_suite_pkcs5.dir/rule
 
 # fast build rule for target.
 test_suite_pkcs5/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/build
 .PHONY : test_suite_pkcs5/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pkparse.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkparse.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkparse.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pkparse.dir/rule
 
 # Convenience name for target.
@@ -832,12 +832,12 @@ test_suite_pkparse: tests/CMakeFiles/test_suite_pkparse.dir/rule
 
 # fast build rule for target.
 test_suite_pkparse/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/build
 .PHONY : test_suite_pkparse/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_pkwrite.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkwrite.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_pkwrite.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_pkwrite.dir/rule
 
 # Convenience name for target.
@@ -846,12 +846,12 @@ test_suite_pkwrite: tests/CMakeFiles/test_suite_pkwrite.dir/rule
 
 # fast build rule for target.
 test_suite_pkwrite/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/build
 .PHONY : test_suite_pkwrite/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_rsa.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_rsa.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_rsa.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_rsa.dir/rule
 
 # Convenience name for target.
@@ -860,12 +860,12 @@ test_suite_rsa: tests/CMakeFiles/test_suite_rsa.dir/rule
 
 # fast build rule for target.
 test_suite_rsa/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/build
 .PHONY : test_suite_rsa/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_shax.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_shax.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_shax.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_shax.dir/rule
 
 # Convenience name for target.
@@ -874,12 +874,12 @@ test_suite_shax: tests/CMakeFiles/test_suite_shax.dir/rule
 
 # fast build rule for target.
 test_suite_shax/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/build
 .PHONY : test_suite_shax/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_ssl.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ssl.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_ssl.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_ssl.dir/rule
 
 # Convenience name for target.
@@ -888,12 +888,12 @@ test_suite_ssl: tests/CMakeFiles/test_suite_ssl.dir/rule
 
 # fast build rule for target.
 test_suite_ssl/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/build
 .PHONY : test_suite_ssl/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_version.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_version.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_version.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_version.dir/rule
 
 # Convenience name for target.
@@ -902,12 +902,12 @@ test_suite_version: tests/CMakeFiles/test_suite_version.dir/rule
 
 # fast build rule for target.
 test_suite_version/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/build
 .PHONY : test_suite_version/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_x509parse.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_x509parse.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_x509parse.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_x509parse.dir/rule
 
 # Convenience name for target.
@@ -916,12 +916,12 @@ test_suite_x509parse: tests/CMakeFiles/test_suite_x509parse.dir/rule
 
 # fast build rule for target.
 test_suite_x509parse/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/build
 .PHONY : test_suite_x509parse/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_x509write.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_x509write.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_x509write.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_x509write.dir/rule
 
 # Convenience name for target.
@@ -930,12 +930,12 @@ test_suite_x509write: tests/CMakeFiles/test_suite_x509write.dir/rule
 
 # fast build rule for target.
 test_suite_x509write/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/build
 .PHONY : test_suite_x509write/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_suite_xtea.dir/rule:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_xtea.dir/rule
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_suite_xtea.dir/rule
 .PHONY : tests/CMakeFiles/test_suite_xtea.dir/rule
 
 # Convenience name for target.
@@ -944,7 +944,7 @@ test_suite_xtea: tests/CMakeFiles/test_suite_xtea.dir/rule
 
 # fast build rule for target.
 test_suite_xtea/fast:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/build
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/build
 .PHONY : test_suite_xtea/fast
 
 test_suite_aes.cbc.o: test_suite_aes.cbc.c.o
@@ -952,7 +952,7 @@ test_suite_aes.cbc.o: test_suite_aes.cbc.c.o
 
 # target to build an object file
 test_suite_aes.cbc.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.o
 .PHONY : test_suite_aes.cbc.c.o
 
 test_suite_aes.cbc.i: test_suite_aes.cbc.c.i
@@ -960,7 +960,7 @@ test_suite_aes.cbc.i: test_suite_aes.cbc.c.i
 
 # target to preprocess a source file
 test_suite_aes.cbc.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.i
 .PHONY : test_suite_aes.cbc.c.i
 
 test_suite_aes.cbc.s: test_suite_aes.cbc.c.s
@@ -968,7 +968,7 @@ test_suite_aes.cbc.s: test_suite_aes.cbc.c.s
 
 # target to generate assembly for a file
 test_suite_aes.cbc.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cbc.dir/build.make tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.s
 .PHONY : test_suite_aes.cbc.c.s
 
 test_suite_aes.cfb.o: test_suite_aes.cfb.c.o
@@ -976,7 +976,7 @@ test_suite_aes.cfb.o: test_suite_aes.cfb.c.o
 
 # target to build an object file
 test_suite_aes.cfb.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.o
 .PHONY : test_suite_aes.cfb.c.o
 
 test_suite_aes.cfb.i: test_suite_aes.cfb.c.i
@@ -984,7 +984,7 @@ test_suite_aes.cfb.i: test_suite_aes.cfb.c.i
 
 # target to preprocess a source file
 test_suite_aes.cfb.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.i
 .PHONY : test_suite_aes.cfb.c.i
 
 test_suite_aes.cfb.s: test_suite_aes.cfb.c.s
@@ -992,7 +992,7 @@ test_suite_aes.cfb.s: test_suite_aes.cfb.c.s
 
 # target to generate assembly for a file
 test_suite_aes.cfb.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.cfb.dir/build.make tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.s
 .PHONY : test_suite_aes.cfb.c.s
 
 test_suite_aes.ecb.o: test_suite_aes.ecb.c.o
@@ -1000,7 +1000,7 @@ test_suite_aes.ecb.o: test_suite_aes.ecb.c.o
 
 # target to build an object file
 test_suite_aes.ecb.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.o
 .PHONY : test_suite_aes.ecb.c.o
 
 test_suite_aes.ecb.i: test_suite_aes.ecb.c.i
@@ -1008,7 +1008,7 @@ test_suite_aes.ecb.i: test_suite_aes.ecb.c.i
 
 # target to preprocess a source file
 test_suite_aes.ecb.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.i
 .PHONY : test_suite_aes.ecb.c.i
 
 test_suite_aes.ecb.s: test_suite_aes.ecb.c.s
@@ -1016,7 +1016,7 @@ test_suite_aes.ecb.s: test_suite_aes.ecb.c.s
 
 # target to generate assembly for a file
 test_suite_aes.ecb.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.ecb.dir/build.make tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.s
 .PHONY : test_suite_aes.ecb.c.s
 
 test_suite_aes.rest.o: test_suite_aes.rest.c.o
@@ -1024,7 +1024,7 @@ test_suite_aes.rest.o: test_suite_aes.rest.c.o
 
 # target to build an object file
 test_suite_aes.rest.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.o
 .PHONY : test_suite_aes.rest.c.o
 
 test_suite_aes.rest.i: test_suite_aes.rest.c.i
@@ -1032,7 +1032,7 @@ test_suite_aes.rest.i: test_suite_aes.rest.c.i
 
 # target to preprocess a source file
 test_suite_aes.rest.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.i
 .PHONY : test_suite_aes.rest.c.i
 
 test_suite_aes.rest.s: test_suite_aes.rest.c.s
@@ -1040,7 +1040,7 @@ test_suite_aes.rest.s: test_suite_aes.rest.c.s
 
 # target to generate assembly for a file
 test_suite_aes.rest.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_aes.rest.dir/build.make tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.s
 .PHONY : test_suite_aes.rest.c.s
 
 test_suite_arc4.o: test_suite_arc4.c.o
@@ -1048,7 +1048,7 @@ test_suite_arc4.o: test_suite_arc4.c.o
 
 # target to build an object file
 test_suite_arc4.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.o
 .PHONY : test_suite_arc4.c.o
 
 test_suite_arc4.i: test_suite_arc4.c.i
@@ -1056,7 +1056,7 @@ test_suite_arc4.i: test_suite_arc4.c.i
 
 # target to preprocess a source file
 test_suite_arc4.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.i
 .PHONY : test_suite_arc4.c.i
 
 test_suite_arc4.s: test_suite_arc4.c.s
@@ -1064,7 +1064,7 @@ test_suite_arc4.s: test_suite_arc4.c.s
 
 # target to generate assembly for a file
 test_suite_arc4.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_arc4.dir/build.make tests/CMakeFiles/test_suite_arc4.dir/test_suite_arc4.c.s
 .PHONY : test_suite_arc4.c.s
 
 test_suite_asn1write.o: test_suite_asn1write.c.o
@@ -1072,7 +1072,7 @@ test_suite_asn1write.o: test_suite_asn1write.c.o
 
 # target to build an object file
 test_suite_asn1write.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.o
 .PHONY : test_suite_asn1write.c.o
 
 test_suite_asn1write.i: test_suite_asn1write.c.i
@@ -1080,7 +1080,7 @@ test_suite_asn1write.i: test_suite_asn1write.c.i
 
 # target to preprocess a source file
 test_suite_asn1write.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.i
 .PHONY : test_suite_asn1write.c.i
 
 test_suite_asn1write.s: test_suite_asn1write.c.s
@@ -1088,7 +1088,7 @@ test_suite_asn1write.s: test_suite_asn1write.c.s
 
 # target to generate assembly for a file
 test_suite_asn1write.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_asn1write.dir/build.make tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.s
 .PHONY : test_suite_asn1write.c.s
 
 test_suite_base64.o: test_suite_base64.c.o
@@ -1096,7 +1096,7 @@ test_suite_base64.o: test_suite_base64.c.o
 
 # target to build an object file
 test_suite_base64.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.o
 .PHONY : test_suite_base64.c.o
 
 test_suite_base64.i: test_suite_base64.c.i
@@ -1104,7 +1104,7 @@ test_suite_base64.i: test_suite_base64.c.i
 
 # target to preprocess a source file
 test_suite_base64.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.i
 .PHONY : test_suite_base64.c.i
 
 test_suite_base64.s: test_suite_base64.c.s
@@ -1112,7 +1112,7 @@ test_suite_base64.s: test_suite_base64.c.s
 
 # target to generate assembly for a file
 test_suite_base64.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_base64.dir/build.make tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.s
 .PHONY : test_suite_base64.c.s
 
 test_suite_blowfish.o: test_suite_blowfish.c.o
@@ -1120,7 +1120,7 @@ test_suite_blowfish.o: test_suite_blowfish.c.o
 
 # target to build an object file
 test_suite_blowfish.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.o
 .PHONY : test_suite_blowfish.c.o
 
 test_suite_blowfish.i: test_suite_blowfish.c.i
@@ -1128,7 +1128,7 @@ test_suite_blowfish.i: test_suite_blowfish.c.i
 
 # target to preprocess a source file
 test_suite_blowfish.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.i
 .PHONY : test_suite_blowfish.c.i
 
 test_suite_blowfish.s: test_suite_blowfish.c.s
@@ -1136,7 +1136,7 @@ test_suite_blowfish.s: test_suite_blowfish.c.s
 
 # target to generate assembly for a file
 test_suite_blowfish.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_blowfish.dir/build.make tests/CMakeFiles/test_suite_blowfish.dir/test_suite_blowfish.c.s
 .PHONY : test_suite_blowfish.c.s
 
 test_suite_camellia.o: test_suite_camellia.c.o
@@ -1144,7 +1144,7 @@ test_suite_camellia.o: test_suite_camellia.c.o
 
 # target to build an object file
 test_suite_camellia.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.o
 .PHONY : test_suite_camellia.c.o
 
 test_suite_camellia.i: test_suite_camellia.c.i
@@ -1152,7 +1152,7 @@ test_suite_camellia.i: test_suite_camellia.c.i
 
 # target to preprocess a source file
 test_suite_camellia.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.i
 .PHONY : test_suite_camellia.c.i
 
 test_suite_camellia.s: test_suite_camellia.c.s
@@ -1160,7 +1160,7 @@ test_suite_camellia.s: test_suite_camellia.c.s
 
 # target to generate assembly for a file
 test_suite_camellia.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_camellia.dir/build.make tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.s
 .PHONY : test_suite_camellia.c.s
 
 test_suite_ccm.o: test_suite_ccm.c.o
@@ -1168,7 +1168,7 @@ test_suite_ccm.o: test_suite_ccm.c.o
 
 # target to build an object file
 test_suite_ccm.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.o
 .PHONY : test_suite_ccm.c.o
 
 test_suite_ccm.i: test_suite_ccm.c.i
@@ -1176,7 +1176,7 @@ test_suite_ccm.i: test_suite_ccm.c.i
 
 # target to preprocess a source file
 test_suite_ccm.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.i
 .PHONY : test_suite_ccm.c.i
 
 test_suite_ccm.s: test_suite_ccm.c.s
@@ -1184,7 +1184,7 @@ test_suite_ccm.s: test_suite_ccm.c.s
 
 # target to generate assembly for a file
 test_suite_ccm.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ccm.dir/build.make tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.s
 .PHONY : test_suite_ccm.c.s
 
 test_suite_cipher.aes.o: test_suite_cipher.aes.c.o
@@ -1192,7 +1192,7 @@ test_suite_cipher.aes.o: test_suite_cipher.aes.c.o
 
 # target to build an object file
 test_suite_cipher.aes.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.o
 .PHONY : test_suite_cipher.aes.c.o
 
 test_suite_cipher.aes.i: test_suite_cipher.aes.c.i
@@ -1200,7 +1200,7 @@ test_suite_cipher.aes.i: test_suite_cipher.aes.c.i
 
 # target to preprocess a source file
 test_suite_cipher.aes.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.i
 .PHONY : test_suite_cipher.aes.c.i
 
 test_suite_cipher.aes.s: test_suite_cipher.aes.c.s
@@ -1208,7 +1208,7 @@ test_suite_cipher.aes.s: test_suite_cipher.aes.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.aes.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.aes.dir/build.make tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.s
 .PHONY : test_suite_cipher.aes.c.s
 
 test_suite_cipher.arc4.o: test_suite_cipher.arc4.c.o
@@ -1216,7 +1216,7 @@ test_suite_cipher.arc4.o: test_suite_cipher.arc4.c.o
 
 # target to build an object file
 test_suite_cipher.arc4.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.o
 .PHONY : test_suite_cipher.arc4.c.o
 
 test_suite_cipher.arc4.i: test_suite_cipher.arc4.c.i
@@ -1224,7 +1224,7 @@ test_suite_cipher.arc4.i: test_suite_cipher.arc4.c.i
 
 # target to preprocess a source file
 test_suite_cipher.arc4.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.i
 .PHONY : test_suite_cipher.arc4.c.i
 
 test_suite_cipher.arc4.s: test_suite_cipher.arc4.c.s
@@ -1232,7 +1232,7 @@ test_suite_cipher.arc4.s: test_suite_cipher.arc4.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.arc4.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.arc4.dir/build.make tests/CMakeFiles/test_suite_cipher.arc4.dir/test_suite_cipher.arc4.c.s
 .PHONY : test_suite_cipher.arc4.c.s
 
 test_suite_cipher.blowfish.o: test_suite_cipher.blowfish.c.o
@@ -1240,7 +1240,7 @@ test_suite_cipher.blowfish.o: test_suite_cipher.blowfish.c.o
 
 # target to build an object file
 test_suite_cipher.blowfish.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.o
 .PHONY : test_suite_cipher.blowfish.c.o
 
 test_suite_cipher.blowfish.i: test_suite_cipher.blowfish.c.i
@@ -1248,7 +1248,7 @@ test_suite_cipher.blowfish.i: test_suite_cipher.blowfish.c.i
 
 # target to preprocess a source file
 test_suite_cipher.blowfish.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.i
 .PHONY : test_suite_cipher.blowfish.c.i
 
 test_suite_cipher.blowfish.s: test_suite_cipher.blowfish.c.s
@@ -1256,7 +1256,7 @@ test_suite_cipher.blowfish.s: test_suite_cipher.blowfish.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.blowfish.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.blowfish.dir/build.make tests/CMakeFiles/test_suite_cipher.blowfish.dir/test_suite_cipher.blowfish.c.s
 .PHONY : test_suite_cipher.blowfish.c.s
 
 test_suite_cipher.camellia.o: test_suite_cipher.camellia.c.o
@@ -1264,7 +1264,7 @@ test_suite_cipher.camellia.o: test_suite_cipher.camellia.c.o
 
 # target to build an object file
 test_suite_cipher.camellia.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.o
 .PHONY : test_suite_cipher.camellia.c.o
 
 test_suite_cipher.camellia.i: test_suite_cipher.camellia.c.i
@@ -1272,7 +1272,7 @@ test_suite_cipher.camellia.i: test_suite_cipher.camellia.c.i
 
 # target to preprocess a source file
 test_suite_cipher.camellia.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.i
 .PHONY : test_suite_cipher.camellia.c.i
 
 test_suite_cipher.camellia.s: test_suite_cipher.camellia.c.s
@@ -1280,7 +1280,7 @@ test_suite_cipher.camellia.s: test_suite_cipher.camellia.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.camellia.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.camellia.dir/build.make tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.s
 .PHONY : test_suite_cipher.camellia.c.s
 
 test_suite_cipher.ccm.o: test_suite_cipher.ccm.c.o
@@ -1288,7 +1288,7 @@ test_suite_cipher.ccm.o: test_suite_cipher.ccm.c.o
 
 # target to build an object file
 test_suite_cipher.ccm.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.o
 .PHONY : test_suite_cipher.ccm.c.o
 
 test_suite_cipher.ccm.i: test_suite_cipher.ccm.c.i
@@ -1296,7 +1296,7 @@ test_suite_cipher.ccm.i: test_suite_cipher.ccm.c.i
 
 # target to preprocess a source file
 test_suite_cipher.ccm.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.i
 .PHONY : test_suite_cipher.ccm.c.i
 
 test_suite_cipher.ccm.s: test_suite_cipher.ccm.c.s
@@ -1304,7 +1304,7 @@ test_suite_cipher.ccm.s: test_suite_cipher.ccm.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.ccm.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.ccm.dir/build.make tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.s
 .PHONY : test_suite_cipher.ccm.c.s
 
 test_suite_cipher.des.o: test_suite_cipher.des.c.o
@@ -1312,7 +1312,7 @@ test_suite_cipher.des.o: test_suite_cipher.des.c.o
 
 # target to build an object file
 test_suite_cipher.des.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.o
 .PHONY : test_suite_cipher.des.c.o
 
 test_suite_cipher.des.i: test_suite_cipher.des.c.i
@@ -1320,7 +1320,7 @@ test_suite_cipher.des.i: test_suite_cipher.des.c.i
 
 # target to preprocess a source file
 test_suite_cipher.des.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.i
 .PHONY : test_suite_cipher.des.c.i
 
 test_suite_cipher.des.s: test_suite_cipher.des.c.s
@@ -1328,7 +1328,7 @@ test_suite_cipher.des.s: test_suite_cipher.des.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.des.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.des.dir/build.make tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.s
 .PHONY : test_suite_cipher.des.c.s
 
 test_suite_cipher.gcm.o: test_suite_cipher.gcm.c.o
@@ -1336,7 +1336,7 @@ test_suite_cipher.gcm.o: test_suite_cipher.gcm.c.o
 
 # target to build an object file
 test_suite_cipher.gcm.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.o
 .PHONY : test_suite_cipher.gcm.c.o
 
 test_suite_cipher.gcm.i: test_suite_cipher.gcm.c.i
@@ -1344,7 +1344,7 @@ test_suite_cipher.gcm.i: test_suite_cipher.gcm.c.i
 
 # target to preprocess a source file
 test_suite_cipher.gcm.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.i
 .PHONY : test_suite_cipher.gcm.c.i
 
 test_suite_cipher.gcm.s: test_suite_cipher.gcm.c.s
@@ -1352,7 +1352,7 @@ test_suite_cipher.gcm.s: test_suite_cipher.gcm.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.gcm.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.gcm.dir/build.make tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.s
 .PHONY : test_suite_cipher.gcm.c.s
 
 test_suite_cipher.null.o: test_suite_cipher.null.c.o
@@ -1360,7 +1360,7 @@ test_suite_cipher.null.o: test_suite_cipher.null.c.o
 
 # target to build an object file
 test_suite_cipher.null.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.o
 .PHONY : test_suite_cipher.null.c.o
 
 test_suite_cipher.null.i: test_suite_cipher.null.c.i
@@ -1368,7 +1368,7 @@ test_suite_cipher.null.i: test_suite_cipher.null.c.i
 
 # target to preprocess a source file
 test_suite_cipher.null.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.i
 .PHONY : test_suite_cipher.null.c.i
 
 test_suite_cipher.null.s: test_suite_cipher.null.c.s
@@ -1376,7 +1376,7 @@ test_suite_cipher.null.s: test_suite_cipher.null.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.null.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.null.dir/build.make tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.s
 .PHONY : test_suite_cipher.null.c.s
 
 test_suite_cipher.padding.o: test_suite_cipher.padding.c.o
@@ -1384,7 +1384,7 @@ test_suite_cipher.padding.o: test_suite_cipher.padding.c.o
 
 # target to build an object file
 test_suite_cipher.padding.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.o
 .PHONY : test_suite_cipher.padding.c.o
 
 test_suite_cipher.padding.i: test_suite_cipher.padding.c.i
@@ -1392,7 +1392,7 @@ test_suite_cipher.padding.i: test_suite_cipher.padding.c.i
 
 # target to preprocess a source file
 test_suite_cipher.padding.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.i
 .PHONY : test_suite_cipher.padding.c.i
 
 test_suite_cipher.padding.s: test_suite_cipher.padding.c.s
@@ -1400,7 +1400,7 @@ test_suite_cipher.padding.s: test_suite_cipher.padding.c.s
 
 # target to generate assembly for a file
 test_suite_cipher.padding.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_cipher.padding.dir/build.make tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.s
 .PHONY : test_suite_cipher.padding.c.s
 
 test_suite_ctr_drbg.o: test_suite_ctr_drbg.c.o
@@ -1408,7 +1408,7 @@ test_suite_ctr_drbg.o: test_suite_ctr_drbg.c.o
 
 # target to build an object file
 test_suite_ctr_drbg.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.o
 .PHONY : test_suite_ctr_drbg.c.o
 
 test_suite_ctr_drbg.i: test_suite_ctr_drbg.c.i
@@ -1416,7 +1416,7 @@ test_suite_ctr_drbg.i: test_suite_ctr_drbg.c.i
 
 # target to preprocess a source file
 test_suite_ctr_drbg.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.i
 .PHONY : test_suite_ctr_drbg.c.i
 
 test_suite_ctr_drbg.s: test_suite_ctr_drbg.c.s
@@ -1424,7 +1424,7 @@ test_suite_ctr_drbg.s: test_suite_ctr_drbg.c.s
 
 # target to generate assembly for a file
 test_suite_ctr_drbg.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ctr_drbg.dir/build.make tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.s
 .PHONY : test_suite_ctr_drbg.c.s
 
 test_suite_debug.o: test_suite_debug.c.o
@@ -1432,7 +1432,7 @@ test_suite_debug.o: test_suite_debug.c.o
 
 # target to build an object file
 test_suite_debug.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.o
 .PHONY : test_suite_debug.c.o
 
 test_suite_debug.i: test_suite_debug.c.i
@@ -1440,7 +1440,7 @@ test_suite_debug.i: test_suite_debug.c.i
 
 # target to preprocess a source file
 test_suite_debug.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.i
 .PHONY : test_suite_debug.c.i
 
 test_suite_debug.s: test_suite_debug.c.s
@@ -1448,7 +1448,7 @@ test_suite_debug.s: test_suite_debug.c.s
 
 # target to generate assembly for a file
 test_suite_debug.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_debug.dir/build.make tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.s
 .PHONY : test_suite_debug.c.s
 
 test_suite_des.o: test_suite_des.c.o
@@ -1456,7 +1456,7 @@ test_suite_des.o: test_suite_des.c.o
 
 # target to build an object file
 test_suite_des.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.o
 .PHONY : test_suite_des.c.o
 
 test_suite_des.i: test_suite_des.c.i
@@ -1464,7 +1464,7 @@ test_suite_des.i: test_suite_des.c.i
 
 # target to preprocess a source file
 test_suite_des.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.i
 .PHONY : test_suite_des.c.i
 
 test_suite_des.s: test_suite_des.c.s
@@ -1472,7 +1472,7 @@ test_suite_des.s: test_suite_des.c.s
 
 # target to generate assembly for a file
 test_suite_des.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_des.dir/build.make tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.s
 .PHONY : test_suite_des.c.s
 
 test_suite_dhm.o: test_suite_dhm.c.o
@@ -1480,7 +1480,7 @@ test_suite_dhm.o: test_suite_dhm.c.o
 
 # target to build an object file
 test_suite_dhm.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.o
 .PHONY : test_suite_dhm.c.o
 
 test_suite_dhm.i: test_suite_dhm.c.i
@@ -1488,7 +1488,7 @@ test_suite_dhm.i: test_suite_dhm.c.i
 
 # target to preprocess a source file
 test_suite_dhm.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.i
 .PHONY : test_suite_dhm.c.i
 
 test_suite_dhm.s: test_suite_dhm.c.s
@@ -1496,7 +1496,7 @@ test_suite_dhm.s: test_suite_dhm.c.s
 
 # target to generate assembly for a file
 test_suite_dhm.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_dhm.dir/build.make tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.s
 .PHONY : test_suite_dhm.c.s
 
 test_suite_ecdh.o: test_suite_ecdh.c.o
@@ -1504,7 +1504,7 @@ test_suite_ecdh.o: test_suite_ecdh.c.o
 
 # target to build an object file
 test_suite_ecdh.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.o
 .PHONY : test_suite_ecdh.c.o
 
 test_suite_ecdh.i: test_suite_ecdh.c.i
@@ -1512,7 +1512,7 @@ test_suite_ecdh.i: test_suite_ecdh.c.i
 
 # target to preprocess a source file
 test_suite_ecdh.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.i
 .PHONY : test_suite_ecdh.c.i
 
 test_suite_ecdh.s: test_suite_ecdh.c.s
@@ -1520,7 +1520,7 @@ test_suite_ecdh.s: test_suite_ecdh.c.s
 
 # target to generate assembly for a file
 test_suite_ecdh.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdh.dir/build.make tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.s
 .PHONY : test_suite_ecdh.c.s
 
 test_suite_ecdsa.o: test_suite_ecdsa.c.o
@@ -1528,7 +1528,7 @@ test_suite_ecdsa.o: test_suite_ecdsa.c.o
 
 # target to build an object file
 test_suite_ecdsa.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.o
 .PHONY : test_suite_ecdsa.c.o
 
 test_suite_ecdsa.i: test_suite_ecdsa.c.i
@@ -1536,7 +1536,7 @@ test_suite_ecdsa.i: test_suite_ecdsa.c.i
 
 # target to preprocess a source file
 test_suite_ecdsa.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.i
 .PHONY : test_suite_ecdsa.c.i
 
 test_suite_ecdsa.s: test_suite_ecdsa.c.s
@@ -1544,7 +1544,7 @@ test_suite_ecdsa.s: test_suite_ecdsa.c.s
 
 # target to generate assembly for a file
 test_suite_ecdsa.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecdsa.dir/build.make tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.s
 .PHONY : test_suite_ecdsa.c.s
 
 test_suite_ecjpake.o: test_suite_ecjpake.c.o
@@ -1552,7 +1552,7 @@ test_suite_ecjpake.o: test_suite_ecjpake.c.o
 
 # target to build an object file
 test_suite_ecjpake.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.o
 .PHONY : test_suite_ecjpake.c.o
 
 test_suite_ecjpake.i: test_suite_ecjpake.c.i
@@ -1560,7 +1560,7 @@ test_suite_ecjpake.i: test_suite_ecjpake.c.i
 
 # target to preprocess a source file
 test_suite_ecjpake.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.i
 .PHONY : test_suite_ecjpake.c.i
 
 test_suite_ecjpake.s: test_suite_ecjpake.c.s
@@ -1568,7 +1568,7 @@ test_suite_ecjpake.s: test_suite_ecjpake.c.s
 
 # target to generate assembly for a file
 test_suite_ecjpake.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecjpake.dir/build.make tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.s
 .PHONY : test_suite_ecjpake.c.s
 
 test_suite_ecp.o: test_suite_ecp.c.o
@@ -1576,7 +1576,7 @@ test_suite_ecp.o: test_suite_ecp.c.o
 
 # target to build an object file
 test_suite_ecp.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.o
 .PHONY : test_suite_ecp.c.o
 
 test_suite_ecp.i: test_suite_ecp.c.i
@@ -1584,7 +1584,7 @@ test_suite_ecp.i: test_suite_ecp.c.i
 
 # target to preprocess a source file
 test_suite_ecp.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.i
 .PHONY : test_suite_ecp.c.i
 
 test_suite_ecp.s: test_suite_ecp.c.s
@@ -1592,7 +1592,7 @@ test_suite_ecp.s: test_suite_ecp.c.s
 
 # target to generate assembly for a file
 test_suite_ecp.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ecp.dir/build.make tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.s
 .PHONY : test_suite_ecp.c.s
 
 test_suite_entropy.o: test_suite_entropy.c.o
@@ -1600,7 +1600,7 @@ test_suite_entropy.o: test_suite_entropy.c.o
 
 # target to build an object file
 test_suite_entropy.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.o
 .PHONY : test_suite_entropy.c.o
 
 test_suite_entropy.i: test_suite_entropy.c.i
@@ -1608,7 +1608,7 @@ test_suite_entropy.i: test_suite_entropy.c.i
 
 # target to preprocess a source file
 test_suite_entropy.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.i
 .PHONY : test_suite_entropy.c.i
 
 test_suite_entropy.s: test_suite_entropy.c.s
@@ -1616,7 +1616,7 @@ test_suite_entropy.s: test_suite_entropy.c.s
 
 # target to generate assembly for a file
 test_suite_entropy.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_entropy.dir/build.make tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.s
 .PHONY : test_suite_entropy.c.s
 
 test_suite_error.o: test_suite_error.c.o
@@ -1624,7 +1624,7 @@ test_suite_error.o: test_suite_error.c.o
 
 # target to build an object file
 test_suite_error.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.o
 .PHONY : test_suite_error.c.o
 
 test_suite_error.i: test_suite_error.c.i
@@ -1632,7 +1632,7 @@ test_suite_error.i: test_suite_error.c.i
 
 # target to preprocess a source file
 test_suite_error.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.i
 .PHONY : test_suite_error.c.i
 
 test_suite_error.s: test_suite_error.c.s
@@ -1640,7 +1640,7 @@ test_suite_error.s: test_suite_error.c.s
 
 # target to generate assembly for a file
 test_suite_error.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_error.dir/build.make tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.s
 .PHONY : test_suite_error.c.s
 
 test_suite_gcm.aes128_de.o: test_suite_gcm.aes128_de.c.o
@@ -1648,7 +1648,7 @@ test_suite_gcm.aes128_de.o: test_suite_gcm.aes128_de.c.o
 
 # target to build an object file
 test_suite_gcm.aes128_de.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.o
 .PHONY : test_suite_gcm.aes128_de.c.o
 
 test_suite_gcm.aes128_de.i: test_suite_gcm.aes128_de.c.i
@@ -1656,7 +1656,7 @@ test_suite_gcm.aes128_de.i: test_suite_gcm.aes128_de.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes128_de.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.i
 .PHONY : test_suite_gcm.aes128_de.c.i
 
 test_suite_gcm.aes128_de.s: test_suite_gcm.aes128_de.c.s
@@ -1664,7 +1664,7 @@ test_suite_gcm.aes128_de.s: test_suite_gcm.aes128_de.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes128_de.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.s
 .PHONY : test_suite_gcm.aes128_de.c.s
 
 test_suite_gcm.aes128_en.o: test_suite_gcm.aes128_en.c.o
@@ -1672,7 +1672,7 @@ test_suite_gcm.aes128_en.o: test_suite_gcm.aes128_en.c.o
 
 # target to build an object file
 test_suite_gcm.aes128_en.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.o
 .PHONY : test_suite_gcm.aes128_en.c.o
 
 test_suite_gcm.aes128_en.i: test_suite_gcm.aes128_en.c.i
@@ -1680,7 +1680,7 @@ test_suite_gcm.aes128_en.i: test_suite_gcm.aes128_en.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes128_en.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.i
 .PHONY : test_suite_gcm.aes128_en.c.i
 
 test_suite_gcm.aes128_en.s: test_suite_gcm.aes128_en.c.s
@@ -1688,7 +1688,7 @@ test_suite_gcm.aes128_en.s: test_suite_gcm.aes128_en.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes128_en.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes128_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.s
 .PHONY : test_suite_gcm.aes128_en.c.s
 
 test_suite_gcm.aes192_de.o: test_suite_gcm.aes192_de.c.o
@@ -1696,7 +1696,7 @@ test_suite_gcm.aes192_de.o: test_suite_gcm.aes192_de.c.o
 
 # target to build an object file
 test_suite_gcm.aes192_de.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.o
 .PHONY : test_suite_gcm.aes192_de.c.o
 
 test_suite_gcm.aes192_de.i: test_suite_gcm.aes192_de.c.i
@@ -1704,7 +1704,7 @@ test_suite_gcm.aes192_de.i: test_suite_gcm.aes192_de.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes192_de.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.i
 .PHONY : test_suite_gcm.aes192_de.c.i
 
 test_suite_gcm.aes192_de.s: test_suite_gcm.aes192_de.c.s
@@ -1712,7 +1712,7 @@ test_suite_gcm.aes192_de.s: test_suite_gcm.aes192_de.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes192_de.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.s
 .PHONY : test_suite_gcm.aes192_de.c.s
 
 test_suite_gcm.aes192_en.o: test_suite_gcm.aes192_en.c.o
@@ -1720,7 +1720,7 @@ test_suite_gcm.aes192_en.o: test_suite_gcm.aes192_en.c.o
 
 # target to build an object file
 test_suite_gcm.aes192_en.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.o
 .PHONY : test_suite_gcm.aes192_en.c.o
 
 test_suite_gcm.aes192_en.i: test_suite_gcm.aes192_en.c.i
@@ -1728,7 +1728,7 @@ test_suite_gcm.aes192_en.i: test_suite_gcm.aes192_en.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes192_en.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.i
 .PHONY : test_suite_gcm.aes192_en.c.i
 
 test_suite_gcm.aes192_en.s: test_suite_gcm.aes192_en.c.s
@@ -1736,7 +1736,7 @@ test_suite_gcm.aes192_en.s: test_suite_gcm.aes192_en.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes192_en.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes192_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.s
 .PHONY : test_suite_gcm.aes192_en.c.s
 
 test_suite_gcm.aes256_de.o: test_suite_gcm.aes256_de.c.o
@@ -1744,7 +1744,7 @@ test_suite_gcm.aes256_de.o: test_suite_gcm.aes256_de.c.o
 
 # target to build an object file
 test_suite_gcm.aes256_de.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.o
 .PHONY : test_suite_gcm.aes256_de.c.o
 
 test_suite_gcm.aes256_de.i: test_suite_gcm.aes256_de.c.i
@@ -1752,7 +1752,7 @@ test_suite_gcm.aes256_de.i: test_suite_gcm.aes256_de.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes256_de.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.i
 .PHONY : test_suite_gcm.aes256_de.c.i
 
 test_suite_gcm.aes256_de.s: test_suite_gcm.aes256_de.c.s
@@ -1760,7 +1760,7 @@ test_suite_gcm.aes256_de.s: test_suite_gcm.aes256_de.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes256_de.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_de.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.s
 .PHONY : test_suite_gcm.aes256_de.c.s
 
 test_suite_gcm.aes256_en.o: test_suite_gcm.aes256_en.c.o
@@ -1768,7 +1768,7 @@ test_suite_gcm.aes256_en.o: test_suite_gcm.aes256_en.c.o
 
 # target to build an object file
 test_suite_gcm.aes256_en.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.o
 .PHONY : test_suite_gcm.aes256_en.c.o
 
 test_suite_gcm.aes256_en.i: test_suite_gcm.aes256_en.c.i
@@ -1776,7 +1776,7 @@ test_suite_gcm.aes256_en.i: test_suite_gcm.aes256_en.c.i
 
 # target to preprocess a source file
 test_suite_gcm.aes256_en.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.i
 .PHONY : test_suite_gcm.aes256_en.c.i
 
 test_suite_gcm.aes256_en.s: test_suite_gcm.aes256_en.c.s
@@ -1784,7 +1784,7 @@ test_suite_gcm.aes256_en.s: test_suite_gcm.aes256_en.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.aes256_en.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.aes256_en.dir/build.make tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.s
 .PHONY : test_suite_gcm.aes256_en.c.s
 
 test_suite_gcm.camellia.o: test_suite_gcm.camellia.c.o
@@ -1792,7 +1792,7 @@ test_suite_gcm.camellia.o: test_suite_gcm.camellia.c.o
 
 # target to build an object file
 test_suite_gcm.camellia.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.o
 .PHONY : test_suite_gcm.camellia.c.o
 
 test_suite_gcm.camellia.i: test_suite_gcm.camellia.c.i
@@ -1800,7 +1800,7 @@ test_suite_gcm.camellia.i: test_suite_gcm.camellia.c.i
 
 # target to preprocess a source file
 test_suite_gcm.camellia.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.i
 .PHONY : test_suite_gcm.camellia.c.i
 
 test_suite_gcm.camellia.s: test_suite_gcm.camellia.c.s
@@ -1808,7 +1808,7 @@ test_suite_gcm.camellia.s: test_suite_gcm.camellia.c.s
 
 # target to generate assembly for a file
 test_suite_gcm.camellia.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_gcm.camellia.dir/build.make tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.s
 .PHONY : test_suite_gcm.camellia.c.s
 
 test_suite_hmac_drbg.misc.o: test_suite_hmac_drbg.misc.c.o
@@ -1816,7 +1816,7 @@ test_suite_hmac_drbg.misc.o: test_suite_hmac_drbg.misc.c.o
 
 # target to build an object file
 test_suite_hmac_drbg.misc.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.o
 .PHONY : test_suite_hmac_drbg.misc.c.o
 
 test_suite_hmac_drbg.misc.i: test_suite_hmac_drbg.misc.c.i
@@ -1824,7 +1824,7 @@ test_suite_hmac_drbg.misc.i: test_suite_hmac_drbg.misc.c.i
 
 # target to preprocess a source file
 test_suite_hmac_drbg.misc.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.i
 .PHONY : test_suite_hmac_drbg.misc.c.i
 
 test_suite_hmac_drbg.misc.s: test_suite_hmac_drbg.misc.c.s
@@ -1832,7 +1832,7 @@ test_suite_hmac_drbg.misc.s: test_suite_hmac_drbg.misc.c.s
 
 # target to generate assembly for a file
 test_suite_hmac_drbg.misc.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.s
 .PHONY : test_suite_hmac_drbg.misc.c.s
 
 test_suite_hmac_drbg.no_reseed.o: test_suite_hmac_drbg.no_reseed.c.o
@@ -1840,7 +1840,7 @@ test_suite_hmac_drbg.no_reseed.o: test_suite_hmac_drbg.no_reseed.c.o
 
 # target to build an object file
 test_suite_hmac_drbg.no_reseed.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.o
 .PHONY : test_suite_hmac_drbg.no_reseed.c.o
 
 test_suite_hmac_drbg.no_reseed.i: test_suite_hmac_drbg.no_reseed.c.i
@@ -1848,7 +1848,7 @@ test_suite_hmac_drbg.no_reseed.i: test_suite_hmac_drbg.no_reseed.c.i
 
 # target to preprocess a source file
 test_suite_hmac_drbg.no_reseed.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.i
 .PHONY : test_suite_hmac_drbg.no_reseed.c.i
 
 test_suite_hmac_drbg.no_reseed.s: test_suite_hmac_drbg.no_reseed.c.s
@@ -1856,7 +1856,7 @@ test_suite_hmac_drbg.no_reseed.s: test_suite_hmac_drbg.no_reseed.c.s
 
 # target to generate assembly for a file
 test_suite_hmac_drbg.no_reseed.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.s
 .PHONY : test_suite_hmac_drbg.no_reseed.c.s
 
 test_suite_hmac_drbg.nopr.o: test_suite_hmac_drbg.nopr.c.o
@@ -1864,7 +1864,7 @@ test_suite_hmac_drbg.nopr.o: test_suite_hmac_drbg.nopr.c.o
 
 # target to build an object file
 test_suite_hmac_drbg.nopr.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.o
 .PHONY : test_suite_hmac_drbg.nopr.c.o
 
 test_suite_hmac_drbg.nopr.i: test_suite_hmac_drbg.nopr.c.i
@@ -1872,7 +1872,7 @@ test_suite_hmac_drbg.nopr.i: test_suite_hmac_drbg.nopr.c.i
 
 # target to preprocess a source file
 test_suite_hmac_drbg.nopr.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.i
 .PHONY : test_suite_hmac_drbg.nopr.c.i
 
 test_suite_hmac_drbg.nopr.s: test_suite_hmac_drbg.nopr.c.s
@@ -1880,7 +1880,7 @@ test_suite_hmac_drbg.nopr.s: test_suite_hmac_drbg.nopr.c.s
 
 # target to generate assembly for a file
 test_suite_hmac_drbg.nopr.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.s
 .PHONY : test_suite_hmac_drbg.nopr.c.s
 
 test_suite_hmac_drbg.pr.o: test_suite_hmac_drbg.pr.c.o
@@ -1888,7 +1888,7 @@ test_suite_hmac_drbg.pr.o: test_suite_hmac_drbg.pr.c.o
 
 # target to build an object file
 test_suite_hmac_drbg.pr.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.o
 .PHONY : test_suite_hmac_drbg.pr.c.o
 
 test_suite_hmac_drbg.pr.i: test_suite_hmac_drbg.pr.c.i
@@ -1896,7 +1896,7 @@ test_suite_hmac_drbg.pr.i: test_suite_hmac_drbg.pr.c.i
 
 # target to preprocess a source file
 test_suite_hmac_drbg.pr.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.i
 .PHONY : test_suite_hmac_drbg.pr.c.i
 
 test_suite_hmac_drbg.pr.s: test_suite_hmac_drbg.pr.c.s
@@ -1904,7 +1904,7 @@ test_suite_hmac_drbg.pr.s: test_suite_hmac_drbg.pr.c.s
 
 # target to generate assembly for a file
 test_suite_hmac_drbg.pr.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/build.make tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.s
 .PHONY : test_suite_hmac_drbg.pr.c.s
 
 test_suite_md.o: test_suite_md.c.o
@@ -1912,7 +1912,7 @@ test_suite_md.o: test_suite_md.c.o
 
 # target to build an object file
 test_suite_md.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.o
 .PHONY : test_suite_md.c.o
 
 test_suite_md.i: test_suite_md.c.i
@@ -1920,7 +1920,7 @@ test_suite_md.i: test_suite_md.c.i
 
 # target to preprocess a source file
 test_suite_md.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.i
 .PHONY : test_suite_md.c.i
 
 test_suite_md.s: test_suite_md.c.s
@@ -1928,7 +1928,7 @@ test_suite_md.s: test_suite_md.c.s
 
 # target to generate assembly for a file
 test_suite_md.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_md.dir/build.make tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.s
 .PHONY : test_suite_md.c.s
 
 test_suite_mdx.o: test_suite_mdx.c.o
@@ -1936,7 +1936,7 @@ test_suite_mdx.o: test_suite_mdx.c.o
 
 # target to build an object file
 test_suite_mdx.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.o
 .PHONY : test_suite_mdx.c.o
 
 test_suite_mdx.i: test_suite_mdx.c.i
@@ -1944,7 +1944,7 @@ test_suite_mdx.i: test_suite_mdx.c.i
 
 # target to preprocess a source file
 test_suite_mdx.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.i
 .PHONY : test_suite_mdx.c.i
 
 test_suite_mdx.s: test_suite_mdx.c.s
@@ -1952,7 +1952,7 @@ test_suite_mdx.s: test_suite_mdx.c.s
 
 # target to generate assembly for a file
 test_suite_mdx.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mdx.dir/build.make tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.s
 .PHONY : test_suite_mdx.c.s
 
 test_suite_memory_buffer_alloc.o: test_suite_memory_buffer_alloc.c.o
@@ -1960,7 +1960,7 @@ test_suite_memory_buffer_alloc.o: test_suite_memory_buffer_alloc.c.o
 
 # target to build an object file
 test_suite_memory_buffer_alloc.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.o
 .PHONY : test_suite_memory_buffer_alloc.c.o
 
 test_suite_memory_buffer_alloc.i: test_suite_memory_buffer_alloc.c.i
@@ -1968,7 +1968,7 @@ test_suite_memory_buffer_alloc.i: test_suite_memory_buffer_alloc.c.i
 
 # target to preprocess a source file
 test_suite_memory_buffer_alloc.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.i
 .PHONY : test_suite_memory_buffer_alloc.c.i
 
 test_suite_memory_buffer_alloc.s: test_suite_memory_buffer_alloc.c.s
@@ -1976,7 +1976,7 @@ test_suite_memory_buffer_alloc.s: test_suite_memory_buffer_alloc.c.s
 
 # target to generate assembly for a file
 test_suite_memory_buffer_alloc.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/build.make tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.s
 .PHONY : test_suite_memory_buffer_alloc.c.s
 
 test_suite_mpi.o: test_suite_mpi.c.o
@@ -1984,7 +1984,7 @@ test_suite_mpi.o: test_suite_mpi.c.o
 
 # target to build an object file
 test_suite_mpi.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.o
 .PHONY : test_suite_mpi.c.o
 
 test_suite_mpi.i: test_suite_mpi.c.i
@@ -1992,7 +1992,7 @@ test_suite_mpi.i: test_suite_mpi.c.i
 
 # target to preprocess a source file
 test_suite_mpi.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.i
 .PHONY : test_suite_mpi.c.i
 
 test_suite_mpi.s: test_suite_mpi.c.s
@@ -2000,7 +2000,7 @@ test_suite_mpi.s: test_suite_mpi.c.s
 
 # target to generate assembly for a file
 test_suite_mpi.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_mpi.dir/build.make tests/CMakeFiles/test_suite_mpi.dir/test_suite_mpi.c.s
 .PHONY : test_suite_mpi.c.s
 
 test_suite_pem.o: test_suite_pem.c.o
@@ -2008,7 +2008,7 @@ test_suite_pem.o: test_suite_pem.c.o
 
 # target to build an object file
 test_suite_pem.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.o
 .PHONY : test_suite_pem.c.o
 
 test_suite_pem.i: test_suite_pem.c.i
@@ -2016,7 +2016,7 @@ test_suite_pem.i: test_suite_pem.c.i
 
 # target to preprocess a source file
 test_suite_pem.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.i
 .PHONY : test_suite_pem.c.i
 
 test_suite_pem.s: test_suite_pem.c.s
@@ -2024,7 +2024,7 @@ test_suite_pem.s: test_suite_pem.c.s
 
 # target to generate assembly for a file
 test_suite_pem.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pem.dir/build.make tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.s
 .PHONY : test_suite_pem.c.s
 
 test_suite_pk.o: test_suite_pk.c.o
@@ -2032,7 +2032,7 @@ test_suite_pk.o: test_suite_pk.c.o
 
 # target to build an object file
 test_suite_pk.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.o
 .PHONY : test_suite_pk.c.o
 
 test_suite_pk.i: test_suite_pk.c.i
@@ -2040,7 +2040,7 @@ test_suite_pk.i: test_suite_pk.c.i
 
 # target to preprocess a source file
 test_suite_pk.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.i
 .PHONY : test_suite_pk.c.i
 
 test_suite_pk.s: test_suite_pk.c.s
@@ -2048,7 +2048,7 @@ test_suite_pk.s: test_suite_pk.c.s
 
 # target to generate assembly for a file
 test_suite_pk.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pk.dir/build.make tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.s
 .PHONY : test_suite_pk.c.s
 
 test_suite_pkcs1_v21.o: test_suite_pkcs1_v21.c.o
@@ -2056,7 +2056,7 @@ test_suite_pkcs1_v21.o: test_suite_pkcs1_v21.c.o
 
 # target to build an object file
 test_suite_pkcs1_v21.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.o
 .PHONY : test_suite_pkcs1_v21.c.o
 
 test_suite_pkcs1_v21.i: test_suite_pkcs1_v21.c.i
@@ -2064,7 +2064,7 @@ test_suite_pkcs1_v21.i: test_suite_pkcs1_v21.c.i
 
 # target to preprocess a source file
 test_suite_pkcs1_v21.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.i
 .PHONY : test_suite_pkcs1_v21.c.i
 
 test_suite_pkcs1_v21.s: test_suite_pkcs1_v21.c.s
@@ -2072,7 +2072,7 @@ test_suite_pkcs1_v21.s: test_suite_pkcs1_v21.c.s
 
 # target to generate assembly for a file
 test_suite_pkcs1_v21.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs1_v21.dir/build.make tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.s
 .PHONY : test_suite_pkcs1_v21.c.s
 
 test_suite_pkcs5.o: test_suite_pkcs5.c.o
@@ -2080,7 +2080,7 @@ test_suite_pkcs5.o: test_suite_pkcs5.c.o
 
 # target to build an object file
 test_suite_pkcs5.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.o
 .PHONY : test_suite_pkcs5.c.o
 
 test_suite_pkcs5.i: test_suite_pkcs5.c.i
@@ -2088,7 +2088,7 @@ test_suite_pkcs5.i: test_suite_pkcs5.c.i
 
 # target to preprocess a source file
 test_suite_pkcs5.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.i
 .PHONY : test_suite_pkcs5.c.i
 
 test_suite_pkcs5.s: test_suite_pkcs5.c.s
@@ -2096,7 +2096,7 @@ test_suite_pkcs5.s: test_suite_pkcs5.c.s
 
 # target to generate assembly for a file
 test_suite_pkcs5.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkcs5.dir/build.make tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.s
 .PHONY : test_suite_pkcs5.c.s
 
 test_suite_pkparse.o: test_suite_pkparse.c.o
@@ -2104,7 +2104,7 @@ test_suite_pkparse.o: test_suite_pkparse.c.o
 
 # target to build an object file
 test_suite_pkparse.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.o
 .PHONY : test_suite_pkparse.c.o
 
 test_suite_pkparse.i: test_suite_pkparse.c.i
@@ -2112,7 +2112,7 @@ test_suite_pkparse.i: test_suite_pkparse.c.i
 
 # target to preprocess a source file
 test_suite_pkparse.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.i
 .PHONY : test_suite_pkparse.c.i
 
 test_suite_pkparse.s: test_suite_pkparse.c.s
@@ -2120,7 +2120,7 @@ test_suite_pkparse.s: test_suite_pkparse.c.s
 
 # target to generate assembly for a file
 test_suite_pkparse.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkparse.dir/build.make tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.s
 .PHONY : test_suite_pkparse.c.s
 
 test_suite_pkwrite.o: test_suite_pkwrite.c.o
@@ -2128,7 +2128,7 @@ test_suite_pkwrite.o: test_suite_pkwrite.c.o
 
 # target to build an object file
 test_suite_pkwrite.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.o
 .PHONY : test_suite_pkwrite.c.o
 
 test_suite_pkwrite.i: test_suite_pkwrite.c.i
@@ -2136,7 +2136,7 @@ test_suite_pkwrite.i: test_suite_pkwrite.c.i
 
 # target to preprocess a source file
 test_suite_pkwrite.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.i
 .PHONY : test_suite_pkwrite.c.i
 
 test_suite_pkwrite.s: test_suite_pkwrite.c.s
@@ -2144,7 +2144,7 @@ test_suite_pkwrite.s: test_suite_pkwrite.c.s
 
 # target to generate assembly for a file
 test_suite_pkwrite.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_pkwrite.dir/build.make tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.s
 .PHONY : test_suite_pkwrite.c.s
 
 test_suite_rsa.o: test_suite_rsa.c.o
@@ -2152,7 +2152,7 @@ test_suite_rsa.o: test_suite_rsa.c.o
 
 # target to build an object file
 test_suite_rsa.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.o
 .PHONY : test_suite_rsa.c.o
 
 test_suite_rsa.i: test_suite_rsa.c.i
@@ -2160,7 +2160,7 @@ test_suite_rsa.i: test_suite_rsa.c.i
 
 # target to preprocess a source file
 test_suite_rsa.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.i
 .PHONY : test_suite_rsa.c.i
 
 test_suite_rsa.s: test_suite_rsa.c.s
@@ -2168,7 +2168,7 @@ test_suite_rsa.s: test_suite_rsa.c.s
 
 # target to generate assembly for a file
 test_suite_rsa.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_rsa.dir/build.make tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.s
 .PHONY : test_suite_rsa.c.s
 
 test_suite_shax.o: test_suite_shax.c.o
@@ -2176,7 +2176,7 @@ test_suite_shax.o: test_suite_shax.c.o
 
 # target to build an object file
 test_suite_shax.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.o
 .PHONY : test_suite_shax.c.o
 
 test_suite_shax.i: test_suite_shax.c.i
@@ -2184,7 +2184,7 @@ test_suite_shax.i: test_suite_shax.c.i
 
 # target to preprocess a source file
 test_suite_shax.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.i
 .PHONY : test_suite_shax.c.i
 
 test_suite_shax.s: test_suite_shax.c.s
@@ -2192,7 +2192,7 @@ test_suite_shax.s: test_suite_shax.c.s
 
 # target to generate assembly for a file
 test_suite_shax.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_shax.dir/build.make tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.s
 .PHONY : test_suite_shax.c.s
 
 test_suite_ssl.o: test_suite_ssl.c.o
@@ -2200,7 +2200,7 @@ test_suite_ssl.o: test_suite_ssl.c.o
 
 # target to build an object file
 test_suite_ssl.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.o
 .PHONY : test_suite_ssl.c.o
 
 test_suite_ssl.i: test_suite_ssl.c.i
@@ -2208,7 +2208,7 @@ test_suite_ssl.i: test_suite_ssl.c.i
 
 # target to preprocess a source file
 test_suite_ssl.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.i
 .PHONY : test_suite_ssl.c.i
 
 test_suite_ssl.s: test_suite_ssl.c.s
@@ -2216,7 +2216,7 @@ test_suite_ssl.s: test_suite_ssl.c.s
 
 # target to generate assembly for a file
 test_suite_ssl.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_ssl.dir/build.make tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.s
 .PHONY : test_suite_ssl.c.s
 
 test_suite_version.o: test_suite_version.c.o
@@ -2224,7 +2224,7 @@ test_suite_version.o: test_suite_version.c.o
 
 # target to build an object file
 test_suite_version.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.o
 .PHONY : test_suite_version.c.o
 
 test_suite_version.i: test_suite_version.c.i
@@ -2232,7 +2232,7 @@ test_suite_version.i: test_suite_version.c.i
 
 # target to preprocess a source file
 test_suite_version.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.i
 .PHONY : test_suite_version.c.i
 
 test_suite_version.s: test_suite_version.c.s
@@ -2240,7 +2240,7 @@ test_suite_version.s: test_suite_version.c.s
 
 # target to generate assembly for a file
 test_suite_version.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_version.dir/build.make tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.s
 .PHONY : test_suite_version.c.s
 
 test_suite_x509parse.o: test_suite_x509parse.c.o
@@ -2248,7 +2248,7 @@ test_suite_x509parse.o: test_suite_x509parse.c.o
 
 # target to build an object file
 test_suite_x509parse.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.o
 .PHONY : test_suite_x509parse.c.o
 
 test_suite_x509parse.i: test_suite_x509parse.c.i
@@ -2256,7 +2256,7 @@ test_suite_x509parse.i: test_suite_x509parse.c.i
 
 # target to preprocess a source file
 test_suite_x509parse.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.i
 .PHONY : test_suite_x509parse.c.i
 
 test_suite_x509parse.s: test_suite_x509parse.c.s
@@ -2264,7 +2264,7 @@ test_suite_x509parse.s: test_suite_x509parse.c.s
 
 # target to generate assembly for a file
 test_suite_x509parse.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509parse.dir/build.make tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.s
 .PHONY : test_suite_x509parse.c.s
 
 test_suite_x509write.o: test_suite_x509write.c.o
@@ -2272,7 +2272,7 @@ test_suite_x509write.o: test_suite_x509write.c.o
 
 # target to build an object file
 test_suite_x509write.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.o
 .PHONY : test_suite_x509write.c.o
 
 test_suite_x509write.i: test_suite_x509write.c.i
@@ -2280,7 +2280,7 @@ test_suite_x509write.i: test_suite_x509write.c.i
 
 # target to preprocess a source file
 test_suite_x509write.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.i
 .PHONY : test_suite_x509write.c.i
 
 test_suite_x509write.s: test_suite_x509write.c.s
@@ -2288,7 +2288,7 @@ test_suite_x509write.s: test_suite_x509write.c.s
 
 # target to generate assembly for a file
 test_suite_x509write.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_x509write.dir/build.make tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.s
 .PHONY : test_suite_x509write.c.s
 
 test_suite_xtea.o: test_suite_xtea.c.o
@@ -2296,7 +2296,7 @@ test_suite_xtea.o: test_suite_xtea.c.o
 
 # target to build an object file
 test_suite_xtea.c.o:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.o
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.o
 .PHONY : test_suite_xtea.c.o
 
 test_suite_xtea.i: test_suite_xtea.c.i
@@ -2304,7 +2304,7 @@ test_suite_xtea.i: test_suite_xtea.c.i
 
 # target to preprocess a source file
 test_suite_xtea.c.i:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.i
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.i
 .PHONY : test_suite_xtea.c.i
 
 test_suite_xtea.s: test_suite_xtea.c.s
@@ -2312,7 +2312,7 @@ test_suite_xtea.s: test_suite_xtea.c.s
 
 # target to generate assembly for a file
 test_suite_xtea.c.s:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.s
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(MAKE) -f tests/CMakeFiles/test_suite_xtea.dir/build.make tests/CMakeFiles/test_suite_xtea.dir/test_suite_xtea.c.s
 .PHONY : test_suite_xtea.c.s
 
 # Help Target
@@ -2567,6 +2567,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kristian/Documents/C++/SecureSender/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kristian/Documents/C++/SecureSender/initial_project/lib/mbedtls && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

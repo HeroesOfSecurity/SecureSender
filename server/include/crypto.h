@@ -14,9 +14,8 @@
 #include <cstring>
 
 
-#define SALT_SIZE 64
+#define SALT_SIZE 32
 #define HASH_SIZE 64
-
 
 class Crypto
 {

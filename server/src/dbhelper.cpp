@@ -67,7 +67,7 @@ int DBHelper::create_client(Client client){
         return 1;
     }
     else {
-        cout << "Client created!!!";
+        cout << "Client created!!!" << endl;
         sqlite3_finalize(insertStmt);
         return 0;
     }

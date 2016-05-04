@@ -67,9 +67,6 @@ void SocketThread::readData()
        username = arguments[0].toString().toUtf8().constData();
        string password = arguments[1].toString().toUtf8().constData();
        int res = register_new_user(username, password);
-       if (res == SUCCESS){
-           dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
-       }
        response["result"] = QJsonValue(res);
        send(response);
     }
@@ -129,11 +126,15 @@ int SocketThread::register_new_user(std::string username, std::string password)
     cout << "Salt:" <<  salt << endl;
     cout << "Hash:" << hash << endl;*/
     string s_salt;
-    for(int i = 0; i < 64; i++)
+    for(int i = 0; i < SALT_SIZE; i++)
         s_salt.push_back(salt[i]);
     //insert user to database
     cout << "Salt:" <<  s_salt << endl;
     Client new_client = Client(username, hash, s_salt);
+    cout << "Name " << username << endl;
+    cout << "HASH " << hash << endl;
+    cout << "S_SALT " << s_salt << endl;
+
     dbHelper->create_client(new_client);
     return 0;
 }

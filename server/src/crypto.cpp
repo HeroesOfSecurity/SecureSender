@@ -1,5 +1,5 @@
 #include "crypto.h"
-
+#include <iostream>
 
 #if !defined(MBEDTLS_CONFIG_FILE)
 #include "mbedtls/config.h"
@@ -29,7 +29,7 @@
 
 
 Crypto::Crypto() {
-
+    iteration_no_pbfkd2 = 1000;
 
 
 }
@@ -40,16 +40,17 @@ int Crypto::perform_pbkdf2(std::string& password, unsigned char* salt, std::stri
     mbedtls_md_context_t ctx;
     
     mbedtls_md_init(&ctx);
-    unsigned char hash[64];
+    mbedtls_md_setup(&ctx, mbedtls_md_info_from_type(MBEDTLS_MD_SHA256), 1);
+    unsigned char hash[HASH_SIZE];
     ret = mbedtls_pkcs5_pbkdf2_hmac(&ctx, (const unsigned char *)password.c_str(),
-                       strlen(password.c_str()), salt,
+                       password.length(), salt,
                        SALT_SIZE,
                        iteration_no_pbfkd2,
                        HASH_SIZE, hash);
-    for(int i = 0; i < 64; i++)
+    //cout << "Hash" << hash << endl;
+    for(int i = 0; i < HASH_SIZE; i++)
         output_hash.push_back(hash[i]);
-    //cout << "HASH: "<< output_hash << endl;
-
+    std::cout << "HASH: "<< output_hash << std::endl;
     
     if(ret != 0)
     {

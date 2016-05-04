@@ -25,7 +25,7 @@ public:
     /**
      * @brief CmdParser destructor of CmdParser
      */
-    virtual ~CmdParser() {};
+    virtual ~CmdParser() {}
 
     /**
      * @brief run Function parse command that user enters
