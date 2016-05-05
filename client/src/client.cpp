@@ -51,7 +51,6 @@ void Client::disconnect()
         server_soc = nullptr;
         qDebug() << "Disconnected from server";
     }
-
 }
 
 bool Client::is_connected()
@@ -103,6 +102,7 @@ std::vector<User> Client::get_online_users(){
     mes.insert("function", QJsonValue(QString::fromStdString("online_users")));
     mes.insert("arguments", QJsonValue());
     send(mes);
+    qDebug() << "Call Online Users";
     QJsonObject json = respond();
     vector<User> v;
     if(json["users"].isArray()){

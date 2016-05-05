@@ -6,6 +6,7 @@
 #include <QThread>
 #include "include/client.h"   //PEKO
 #include <string>
+#include <vector>
 #define  CMD_COUNT 9
 
 
@@ -108,7 +109,11 @@ public:
                                 std::cout << "you are not connected to server !!!" << std::endl;
                                 break;
                             }
-                            c.get_online_users();
+
+                            std::vector<User> online_users = c.get_online_users();
+                            foreach (auto user, online_users) {
+                                std::cout << "Username: " << user.getUsername() << "    " << "IP" << user.getIP() <<std::endl;
+                            }
                             break;
                 }
                 default:

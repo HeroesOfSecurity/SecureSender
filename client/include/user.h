@@ -21,7 +21,8 @@ private:
 public:
     User() {};
     User(std::string u, std::string ip) : username(u), ip_address(ip){ }
-    
+    std::string getUsername() {return username; }
+    std::string getIP() { return ip_address; }
 };
 
 #endif	/* USER_H */

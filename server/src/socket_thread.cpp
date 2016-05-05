@@ -41,12 +41,9 @@ int SocketThread::readJsonObject(QString &function_type, QJsonArray &arguments)
     if (json.isEmpty()) {
         return 1;
     }
-    if(!json["arguments"].isArray())
-    {
-        return 1;
-    }
     function_type = json["function"].toString();
-    arguments = json["arguments"].toArray();
+    if(!json["arguments"].isNull())
+        arguments = json["arguments"].toArray();
     return 0;
 }
 
@@ -70,6 +67,7 @@ void SocketThread::readData()
        response["result"] = QJsonValue(res);
        send(response);
     }
+
     else if(function.compare("sign_in") == 0)
     {
         username = arguments[0].toString().toUtf8().constData();
@@ -79,23 +77,27 @@ void SocketThread::readData()
             dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
         }
         response["result"] = QJsonValue(res);
-        //authenticated = true;
-    } else if(/*authenticated && */function.compare("online_users") == 0)
+
+    } else if(function.compare("online_users") == 0)
     {
         QList<online_user> online_list = online_users();
-        //response["result"] = QJsonValue(QJsonArray::fromVariantList(online_list));
-    }
+        QJsonArray usersArray;
+        for(auto it = online_list.begin(); it != online_list.end(); ++it){
+            QJsonObject online_user;
+            online_user.insert("username", QJsonValue(it->name));
+            online_user.insert("ip_address", QJsonValue(it->ip.toString()));
 
+            usersArray.push_back(online_user);
+        }
+        response["users"] = usersArray;
+    }
     //send response back to client
     send(response);
 }
 
 void SocketThread::quit()
 {
-//    if(authenticated)
-//    {
-        dbHelper->logout_client(QString::fromStdString(username));
-//    }
+    dbHelper->logout_client(QString::fromStdString(username));
     exit(0);
 }
 
@@ -122,18 +124,10 @@ int SocketThread::register_new_user(std::string username, std::string password)
     //generate hash
     std::string hash;
     ps.perform_pbkdf2(password, salt, hash);
-    /*cout << "Heslo:" << password << endl;
-    cout << "Salt:" <<  salt << endl;
-    cout << "Hash:" << hash << endl;*/
     string s_salt;
     for(int i = 0; i < SALT_SIZE; i++)
         s_salt.push_back(salt[i]);
-    //insert user to database
-    cout << "Salt:" <<  s_salt << endl;
     Client new_client = Client(username, hash, s_salt);
-    cout << "Name " << username << endl;
-    cout << "HASH " << hash << endl;
-    cout << "S_SALT " << s_salt << endl;
 
     dbHelper->create_client(new_client);
     return 0;
@@ -164,36 +158,8 @@ int SocketThread::authenticate(std::string username, std::string password)
     return SUCCESS;
 }
 
-
 QList<online_user> SocketThread::online_users()
 {
-
-    /*
-    if(!dbHelper->client_exists(username))
-    {
-        return 1;
-    }
-
-    Client client = dbHelper->get_client(username);
-    std::vector<std::string> online_user_contacts;
-    std::vector<std::string> all_user_contacts = dbHelper.(username);
-    for(int i = 0; i < contacts.size(); i++)
-    {
-        if(all_online_users(all_user_contacts[i]))
-        {
-            online_user_contacts.push_back(all_user_contacts[i]);
-        }
-    }*/
-    //std::vector<std::string> output(all_online_users.size());
-    //std::copy(all_online_users.begin(), all_online_users.end(), output.begin());
-
     return dbHelper->get_online_users();
 }
 
-
-//NOT SUPPORTED YET
-/*
-void SocketThread::add_friend(string name){
-    return;
-}
-*/
