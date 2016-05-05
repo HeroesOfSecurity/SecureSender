@@ -22,7 +22,7 @@ class SocketThread : public QThread
     DBHelper* dbHelper;
     Crypto ps;
 
-    std::string username = "skuska";
+    std::string username;
     bool authenticated = false;
 
 public:
