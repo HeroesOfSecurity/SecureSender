@@ -14,8 +14,8 @@
 class CmdParser : public QThread
 {
     Q_OBJECT
-    enum cmd_types { EXIT, LOGOUT, SIGN_IN, SIGN_UP, ONLINE_USERS/*, CHAT, CLOSE_CHAT, SEND*/};
-    std::string commands[CMD_COUNT] = { "exit", "logout","sign_in", "sign_up", "online_users"/*, "chat", "close_chat", "send"*/ };
+    enum cmd_types { EXIT, LOGOUT, SIGN_IN, SIGN_UP, ONLINE_USERS, CHAT};
+    std::string commands[CMD_COUNT] = { "exit", "logout","sign_in", "sign_up", "online_users", "chat"};
 
 public:
 
@@ -43,7 +43,7 @@ public:
         int cmd_idx;
         bool is_running = true;
 
-        std::cout << "supported commands -> [exit | logout | sign_up | sign_in | online_users | chat | close_chat | send]" << std::endl;
+        std::cout << "supported commands -> [exit | logout | sign_up | sign_in | online_users | chat ]" << std::endl;
         while (is_running) {
             std::cout << "Enter new command:";
             std::cin >> input_cmd;
@@ -149,6 +149,28 @@ public:
                             foreach (auto user, online_users) {
                                 std::cout << "Username: " << user.getUsername() <<std::endl;
                             }
+                            break;
+                }
+                case CHAT:
+                {
+                            if (!con.is_connected()){
+                                std::cout << "Connection is lost" << std::endl;
+                                return;
+                            }
+
+                            if (c == nullptr){
+                                std::cout << "You have to sign in at first" << std::endl;
+                                break;
+                            }
+                            std::cout << "Enter the name" << std::endl;
+                            std::string name;
+                            std::cin >> name;
+                            std::string ip = c->getIP(name);
+                            if(ip.compare("") == 0){
+                                std::cout << "The client is not online" << std::endl;
+                                break;
+                            }
+                            c->startChat(ip);
                             break;
                 }
                 default:

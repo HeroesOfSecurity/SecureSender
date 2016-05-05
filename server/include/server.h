@@ -24,9 +24,10 @@
 
 class Server: public QTcpServer
 {
+    Q_OBJECT
 private:
 
-    Q_OBJECT
+
     qint16 port;
 
     DBHelper* dbHelper;
