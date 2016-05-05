@@ -7,14 +7,15 @@
 #include "include/client.h"   //PEKO
 #include <string>
 #include <vector>
+#include <include/client_server_connection.h>
 #define  CMD_COUNT 9
 
 
 class CmdParser : public QThread
 {
     Q_OBJECT
-    enum cmd_types { EXIT, CONNECT, DISCONNECT, SIGN_IN, SIGN_UP, ONLINE_USERS/*, CHAT, CLOSE_CHAT, SEND*/};
-    std::string commands[CMD_COUNT] = { "exit", "connect", "disconnect","sign_in", "sign_up", "online_users"/*, "chat", "close_chat", "send"*/ };
+    enum cmd_types { EXIT, LOGOUT, SIGN_IN, SIGN_UP, ONLINE_USERS/*, CHAT, CLOSE_CHAT, SEND*/};
+    std::string commands[CMD_COUNT] = { "exit", "logout","sign_in", "sign_up", "online_users"/*, "chat", "close_chat", "send"*/ };
 
 public:
 
@@ -33,14 +34,16 @@ public:
      */
     void run()
     {
-        Client c(*this);
+        Client* c = nullptr;
+        ClientServerConnection con(this);
+        con.connect_to_server();
         //QObject::connect(&c, SIGNAL(finished()),, SLOT(quit()));
 
         std::string input_cmd;
         int cmd_idx;
         bool is_running = true;
 
-        std::cout << "supported commands -> [exit | connect | disconnect | sign_up | sign_in | online_users | chat | close_chat | send]" << std::endl;
+        std::cout << "supported commands -> [exit | logout | sign_up | sign_in | online_users | chat | close_chat | send]" << std::endl;
         while (is_running) {
             std::cout << "Enter new command:";
             std::cin >> input_cmd;
@@ -54,44 +57,69 @@ public:
             switch (cmd_idx) {
                 case EXIT:
                 {
-                            is_running = false;
-                            break;
+                        if (con.is_connected()){
+                            if(c != nullptr){
+                                con.logout(c->getUsername());
+                            }
+                            con.disconnect();
+                        }
+                        delete c;
+                        c = nullptr;
+                        return;
+                        //break;
                 }
-                case CONNECT:
+                case LOGOUT:
                 {
-                            c.connect_to_server();
-                            break;
-                }
-                case DISCONNECT:
-                {
-                            if (!c.is_connected())
+                            if (!con.is_connected()){
+                                std::cout << "Connection is lost" << std::endl;
+                                return;
+                            }
+
+                            if (c == nullptr)
                             {
-                                std::cout << "you are not connected to server !!!" << std::endl;
+                                std::cout << "you are not sign in !!!" << std::endl;
                                 break;
                             }
-                            c.disconnect();
+                            con.logout(c->getUsername());
+
+                            delete c;
+                            c = nullptr;
                             break;
                 }
                 case SIGN_IN:
                 {
-                            if (!c.is_connected())
+                            if (!con.is_connected()){
+                                std::cout << "Connection is lost" << std::endl;
+                                return;
+                            }
+                            if (c != nullptr)
                             {
-                                std::cout << "you are not connected to server !!!" << std::endl;
+                                std::cout << "You are already sign in" << std::endl;
                                 break;
+
                             }
                             std::string name, password;
                             std::cout << "Enter your username: ";
                             std::cin >> name;
                             std::cout << "enter your password: ";
                             std::cin >> password;
-                            c.sign_in(name, password);
+                            int res = con.sign_in(name, password);
+                            if(res != OK){
+                                std::cout << "Wrong user credentials" << std::endl;
+                            }
+                            else{
+                                c = new Client(name);
+                            }
                             break;
                 }
                 case SIGN_UP:
                 {
-                            if (!c.is_connected())
-                            {
-                                std::cout << "you are not connected to server !!!" << std::endl;
+                            if (!con.is_connected()){
+                                std::cout << "Connection is lost" << std::endl;
+                                return;
+                            }
+                            if (c != nullptr){
+                                std::cout << "You are already signed in" << std::endl;
                                 break;
                             }
                             std::string name, password;
@@ -99,20 +127,27 @@ public:
                             std::cin >> name;
                             std::cout << "enter your new password: ";
                             std::cin >> password;
-                            c.sign_up(name, password);
+                            int res = con.sign_up(name, password);
+                            if(res != OK){
+                                std::cout << "Registration failed" << std::endl;
+                            }
                             break;
                 }
                 case ONLINE_USERS:
                 {
-                            if (!c.is_connected())
-                            {
-                                std::cout << "you are not connected to server !!!" << std::endl;
-                                break;
+                            if (!con.is_connected()){
+                                std::cout << "Connection is lost" << std::endl;
+                                return;
                             }
 
-                            std::vector<User> online_users = c.get_online_users();
+                            if (c == nullptr){
+                                std::cout << "You have to sign in at first" << std::endl;
+                                break;
+                            }
+                            std::vector<User> online_users = con.get_online_users();
+                            c->setOnlineUsers(online_users);
                             foreach (auto user, online_users) {
-                                std::cout << "Username: " << user.getUsername() << "    " << "IP" << user.getIP() <<std::endl;
+                                std::cout << "Username: " << user.getUsername() <<std::endl;
                             }
                             break;
                 }
@@ -130,4 +165,4 @@ public:
 };
 
 
-#endif COMMAND_PARSER_H
+#endif

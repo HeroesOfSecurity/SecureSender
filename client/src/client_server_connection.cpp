@@ -1,4 +1,4 @@
-#include <include/client.h>
+#include "include/client_server_connection.h"
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -11,27 +11,19 @@
 #include <qt5/QtCore/QJsonDocument>
 #include <qt5/QtCore/QString>
 
+
 using namespace std;
 
-/*
-Client::Client() : server_soc(nullptr){
-    token = nullptr;
-    session = Session();
-}*/
-
-
-Client::Client(QObject &par) : parent(par), server_soc(nullptr){
-    token = nullptr;
+ClientServerConnection::ClientServerConnection(QObject *parent) {
+    server_soc = new QTcpSocket(this);
 }
 
 
-Client::~Client(){
-    delete[] token;
+ClientServerConnection::~ClientServerConnection(){
 }
 
-bool Client::connect_to_server()
+bool ClientServerConnection::connect_to_server()
 {
-    server_soc = new QTcpSocket(&parent);
     server_soc->connectToHost(QHostAddress(QString(SERVER_IP)), SERVER_PORT);
     if (!server_soc->waitForConnected()) {
         qDebug() << "Could not connect to server";
@@ -42,24 +34,24 @@ bool Client::connect_to_server()
 }
 
 
-void Client::disconnect()
+void ClientServerConnection::disconnect()
 {
     if(is_connected())
     {
         server_soc->disconnectFromHost();
-        delete server_soc;
-        server_soc = nullptr;
+        //delete server_soc;
+        //server_soc = nullptr;
         qDebug() << "Disconnected from server";
     }
 }
 
-bool Client::is_connected()
+bool ClientServerConnection::is_connected()
 {
     return server_soc->state() == QTcpSocket::ConnectedState;
 }
 
 
-int Client::sign_in(string &username, string &password){
+int ClientServerConnection::sign_in(string &username, string &password){
 
     QJsonObject mes;
     mes.insert("function", QJsonValue(QString::fromStdString("sign_in")));
@@ -78,7 +70,7 @@ int Client::sign_in(string &username, string &password){
 }
 
 
-int Client::sign_up(string username, string password){
+int ClientServerConnection::sign_up(string username, string password){
     QJsonObject mes;
     mes.insert("function", QJsonValue(QString::fromStdString("sign_up")));
     mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username), QString::fromStdString(password)})));
@@ -97,7 +89,7 @@ int Client::sign_up(string username, string password){
 }
 
 
-std::vector<User> Client::get_online_users(){
+std::vector<User> ClientServerConnection::get_online_users(){
     QJsonObject mes;
     mes.insert("function", QJsonValue(QString::fromStdString("online_users")));
     mes.insert("arguments", QJsonValue());
@@ -117,18 +109,29 @@ std::vector<User> Client::get_online_users(){
     return v;
 }
 
-void Client::send(QJsonObject &mes){
+void ClientServerConnection::send(QJsonObject &mes){
     QByteArray arr;
     QJsonDocument js(mes);
     arr = js.toJson();
     server_soc->write(arr);
     server_soc->waitForBytesWritten();
+    server_soc->flush();
 }
 
-QJsonObject Client::respond(){
+QJsonObject ClientServerConnection::respond(){
     server_soc->waitForReadyRead();
     QByteArray arr = server_soc->readAll();
+    server_soc->flush();
     QJsonObject json = QJsonDocument::fromJson(arr).object();
     return json;
 }
 
+int ClientServerConnection::logout(std::string username){
+    QJsonObject mes;
+    mes.insert("function", QJsonValue(QString::fromStdString("logout")));
+    mes.insert("arguments", QJsonValue(QJsonArray::fromStringList({QString::fromStdString(username)})));
+    send(mes);
+    QJsonObject json = respond();
+    int res = json["result"].toInt();
+    return res;
+}

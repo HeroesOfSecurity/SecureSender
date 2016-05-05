@@ -86,11 +86,12 @@ bool DBHelper::sign_in_client(QString username, QHostAddress ip)
 
 bool DBHelper::logout_client(QString username)
 {
-    cout << "Username" << username.toStdString() << endl;
-    for(auto user = online_users.begin(); user != online_users.end(); ++user){
-       if(user->name.compare(username) == 0)
-            online_users.erase(user);
-   }
+    cout << "Velkost " << online_users.size() << "Meno:" << username.toStdString() << endl;
+    QMutableListIterator<online_user> i(online_users);
+    while (i.hasNext()) {
+            if(i.next().name.compare(username) == 0)
+            i.remove();
+    }
     return true;
 }
 

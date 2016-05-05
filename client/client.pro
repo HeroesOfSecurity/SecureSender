@@ -11,13 +11,14 @@ unix {
 
 QT += network
 
-SOURCES +=  src/client.cpp \
+SOURCES +=  \
             src/crypto.cpp \
             src/main.cpp \
             src/session.cpp \
             src/user.cpp \
     src/command_parser.cpp \
-    src/command_parser.cpp
+    src/command_parser.cpp \
+    src/client_server_connection.cpp
 
 HEADERS +=  include/catch.hpp \
             include/chat.h \

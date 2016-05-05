@@ -12,6 +12,7 @@
 SocketThread::SocketThread(qintptr socket_ptr, DBHelper*& dbHelper, QObject *parent) : QThread(parent), sock_ptr(socket_ptr), dbHelper(dbHelper)
 {
     qDebug() << "Constructing new thread";
+    username = "";
     ps = Crypto();
 }
 
@@ -37,6 +38,7 @@ SocketThread::~SocketThread()
 int SocketThread::readJsonObject(QString &function_type, QJsonArray &arguments)
 {
     QByteArray arr = socket->readAll();
+    socket->flush();
     QJsonObject json = QJsonDocument::fromJson(arr).object();
     if (json.isEmpty()) {
         return 1;
@@ -61,24 +63,25 @@ void SocketThread::readData()
 
     QJsonObject response;
     if(function.compare("sign_up") == 0){
-       username = arguments[0].toString().toUtf8().constData();
+       string user = arguments[0].toString().toUtf8().constData();
        string password = arguments[1].toString().toUtf8().constData();
-       int res = register_new_user(username, password);
+       int res = register_new_user(user, password);
        response["result"] = QJsonValue(res);
-       send(response);
     }
 
     else if(function.compare("sign_in") == 0)
     {
-        username = arguments[0].toString().toUtf8().constData();
+        string user = arguments[0].toString().toUtf8().constData();
         string password = arguments[1].toString().toUtf8().constData();
-        int res = authenticate(username, password);
+        int res = authenticate(user, password);
         if(res == SUCCESS){
+            username = user;
             dbHelper->sign_in_client(QString::fromStdString(username), socket->peerAddress());
         }
         response["result"] = QJsonValue(res);
 
-    } else if(function.compare("online_users") == 0)
+    }
+    else if(function.compare("online_users") == 0)
     {
         QList<online_user> online_list = online_users();
         QJsonArray usersArray;
@@ -90,6 +93,13 @@ void SocketThread::readData()
             usersArray.push_back(online_user);
         }
         response["users"] = usersArray;
+    }
+    else if(function.compare("logout") == 0){
+        cout << "LogOUT" << endl;
+        QString user = arguments[0].toString();
+        std::cout << "KLIENT: " << user.toStdString() << std::endl;
+        dbHelper->logout_client(user);
+        response["result"] = QJsonValue(0);
     }
     //send response back to client
     send(response);
@@ -108,6 +118,7 @@ void SocketThread::send(QJsonObject &mes)
     arr = js.toJson();
     socket->write(arr);
     socket->waitForBytesWritten();
+    socket->flush();
 }
 
 
