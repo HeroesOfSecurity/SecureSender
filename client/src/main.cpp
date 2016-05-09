@@ -23,16 +23,5 @@ int main(int argc, char** argv) {
     QObject::connect(&cmd_parser, SIGNAL(finished()), &app, SLOT(quit()));
     cmd_parser.start();
     return app.exec();
-    /*
-    Client c(a);
-    int value = 100;
-    string name("peto");
-    string psw("123");
-
-    value = c.sign_up(name, psw);
-    //value = c.sign_in(name, psw);
-    cout << "hodnota: " << value << endl;
-    cout << "Client finished" << endl;*/
-    //return 0;
 }
 

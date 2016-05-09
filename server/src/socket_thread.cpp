@@ -8,6 +8,10 @@
 #include <QJsonArray>
 #include <QJsonValue>
 #include <QJsonObject>
+#include <QSslConfiguration>
+#include <QFile>
+#include <QSslCertificate>
+#include <QSslKey>
 
 SocketThread::SocketThread(qintptr socket_ptr, DBHelper*& dbHelper, QObject *parent) : QThread(parent), sock_ptr(socket_ptr), dbHelper(dbHelper)
 {
@@ -18,12 +22,29 @@ SocketThread::SocketThread(qintptr socket_ptr, DBHelper*& dbHelper, QObject *par
 
 void SocketThread::run()
 {
-    socket = new QTcpSocket(NULL);
+    socket = new QSslSocket(nullptr);
+
+    //set ssl configuration
+    QSslConfiguration sslConfiguration;
+    QFile certFile(QStringLiteral("server.crt"));
+    QFile keyFile(QStringLiteral("server.key"));
+    QSslCertificate certificate(&certFile, QSsl::Pem);
+    QSslKey sslKey(&keyFile, QSsl::Rsa, QSsl::Pem);
+    certFile.close();
+    keyFile.close();
+    sslConfiguration.setPeerVerifyMode(QSslSocket::VerifyNone);
+    sslConfiguration.setLocalCertificate(certificate);
+    sslConfiguration.setPrivateKey(sslKey);
+    sslConfiguration.setProtocol(QSsl::TlsV1SslV3);
+    socket->setSslConfiguration(sslConfiguration);
+
     socket->setSocketDescriptor(sock_ptr);
+
     connect(this, SIGNAL(finished()), this, SLOT(deleteLater()), Qt::DirectConnection);
     connect(socket, SIGNAL(readyRead()), this, SLOT(readData()), Qt::DirectConnection);
     connect(socket, SIGNAL(disconnected()), this, SLOT(quit()), Qt::DirectConnection);
     const QHostAddress &connected = socket->peerAddress();
+
     qDebug()<< connected.toString();
     exec();
 }
@@ -31,6 +52,7 @@ void SocketThread::run()
 SocketThread::~SocketThread()
 {
     qDebug() << "Quiting";
+    socket->close();
     delete socket;
 }
 
@@ -173,4 +195,6 @@ QList<online_user> SocketThread::online_users()
 {
     return dbHelper->get_online_users();
 }
+
+
 

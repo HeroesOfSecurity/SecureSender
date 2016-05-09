@@ -120,6 +120,14 @@ public:
      * @return status, SUCCESS -> generating was succesful, ERR_GENERATE_IV -> fail
      */
     int generate_init_vector(size_t iv_length, unsigned char ** init_vector);
+
+
+    /**
+     * @brief generate_aes_key Function generates aes key
+     * @param key generated key
+     * @param key_length length of key
+     */
+    void generate_aes_key(unsigned char* key, int key_length);
 };
 
 

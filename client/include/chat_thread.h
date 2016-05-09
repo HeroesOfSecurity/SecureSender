@@ -6,7 +6,6 @@
 #include <QTcpSocket>
 #include <QProcess>
 
-#include "include/console.h"
 
 /**
  * @brief The SocketThread class

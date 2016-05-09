@@ -12,30 +12,29 @@
 #include <vector>
 #include <algorithm>
 
-#include "crypto.h"
 #include "dbhelper.h"
 #include "client.h"
 
 #include <QObject>
-#include <QTcpServer>
 #include <QThread>
-
+#include <QTcpServer>
 
 
 class Server: public QTcpServer
 {
     Q_OBJECT
+
 private:
 
-
+    //server's port
     qint16 port;
 
+    //sqlite database
     DBHelper* dbHelper;
-    
+
 public:
-    
-    Server();
-    explicit Server(qint16 port, QObject *parent = 0);
+
+    explicit Server(qint16 port, QObject *parent = Q_NULLPTR);
     ~Server();
 
 
@@ -43,6 +42,7 @@ public:
      * @brief start Method starts infinite loop
      */
     void start();
+
 
 protected:
 
@@ -52,6 +52,8 @@ protected:
      * @param handle socket descriptor assigned to new connection
      */
     void incomingConnection(qintptr handle) override;
+
+
 signals:
 
     /**

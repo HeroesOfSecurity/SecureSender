@@ -20,7 +20,6 @@
 #include "mbedtls/ctr_drbg.h"
 #endif
 
-
 #include "mbedtls/pkcs5.h"
 
 
@@ -112,5 +111,26 @@ void Crypto::hash(unsigned char *fileContent, unsigned char* sha_result)    {
 }
 
 
+int Crypto::generateRSAKey(mbedtls_pk_context& rsa_ctx)
+{
+    mbedtls_entropy_context entropy;
+    mbedtls_ctr_drbg_context ctr_drbg;
+
+    mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
+
+    mbedtls_pk_init(&rsa_ctx);
+
+    int ret;
+    ret += mbedtls_pk_setup(&rsa_ctx, mbedtls_pk_info_from_type(MBEDTLS_PK_RSA));
+
+    ret += mbedtls_rsa_gen_key(mbedtls_pk_rsa(rsa_ctx), mbedtls_ctr_drbg_random, &ctr_drbg,
+        4096, 65537);
+
+    mbedtls_ctr_drbg_free(&ctr_drbg);
+    mbedtls_entropy_free(&entropy);
+
+    return ret;
+}
 
 

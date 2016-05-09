@@ -11,8 +11,9 @@
 
 #include <string>
 #include <QObject>
-#include <QTcpSocket>
+#include <QSslSocket>
 #include <include/user.h>
+#include <include/crypto.h>
 
 enum Status {OK, W_USR, W_PSWD};
 
@@ -20,13 +21,19 @@ enum Status {OK, W_USR, W_PSWD};
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 8082
 
+#define KEY_LENGTH 32
+
 class ClientServerConnection : QObject
 {
     Q_OBJECT
 private:
 
     //socket with server
-    QTcpSocket *server_soc;
+    QSslSocket *server_soc;
+
+    Crypto *crypto;
+    unsigned char aes_key[KEY_LENGTH];
+
 public:
     ClientServerConnection(QObject *parent);
     virtual ~ClientServerConnection();
@@ -35,6 +42,12 @@ public:
      * @return true -> connection succesful, false -> fail
      */
     bool connect_to_server();
+
+    /**
+     * @brief This function establish aes key with server
+     * @return true -> OK, false -> otherwise
+     */
+    bool establishKey();
 
     /**
      * @brief This function disconnects client from server

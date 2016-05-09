@@ -4,9 +4,6 @@
 
 
 using namespace std;
-Server::Server(){
-    dbHelper = new DBHelper(string("database.db"));
-}
 
 Server::Server(qint16 port, QObject *parent) : QTcpServer(parent), port(port)
 {

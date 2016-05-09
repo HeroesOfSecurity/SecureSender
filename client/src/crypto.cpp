@@ -91,3 +91,22 @@ int Crypto::generate_init_vector(size_t iv_len, unsigned char** init_vector)
     *init_vector = iv;
     return SUCCESS;
 }
+
+
+void Crypto::generate_aes_key(unsigned char* key, int key_length)
+{
+    mbedtls_entropy_context entropy;
+    mbedtls_ctr_drbg_context ctr_drbg;
+
+    mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
+
+    int ret = 0;
+
+    ret += mbedtls_ctr_drbg_random(&ctr_drbg, key, key_length);
+
+    mbedtls_ctr_drbg_free(&ctr_drbg);
+    mbedtls_entropy_free(&entropy);
+
+    return;
+}

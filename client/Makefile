@@ -657,7 +657,6 @@ moc_chat_thread.cpp: /usr/include/qt5/QtCore/QObject \
 		/usr/include/qt5/QtCore/qcontiguouscache.h \
 		/usr/include/qt5/QtCore/QProcess \
 		/usr/include/qt5/QtCore/qprocess.h \
-		include/console.h \
 		include/chat_thread.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include include/chat_thread.h -o moc_chat_thread.cpp
 
@@ -1221,8 +1220,7 @@ client.o: src/client.cpp include/client.h \
 		/usr/include/qt5/QtNetwork/QTcpSocket \
 		/usr/include/qt5/QtNetwork/qtcpsocket.h \
 		/usr/include/qt5/QtCore/QProcess \
-		/usr/include/qt5/QtCore/qprocess.h \
-		include/console.h
+		/usr/include/qt5/QtCore/qprocess.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o client.o src/client.cpp
 
 chat_thread.o: src/chat_thread.cpp include/chat_thread.h \
@@ -1307,7 +1305,6 @@ chat_thread.o: src/chat_thread.cpp include/chat_thread.h \
 		/usr/include/qt5/QtCore/qcontiguouscache.h \
 		/usr/include/qt5/QtCore/QProcess \
 		/usr/include/qt5/QtCore/qprocess.h \
-		include/console.h \
 		/usr/include/qt5/QtCore/QDataStream \
 		/usr/include/qt5/QtNetwork/QHostAddress \
 		/usr/include/qt5/QtNetwork/qhostaddress.h \

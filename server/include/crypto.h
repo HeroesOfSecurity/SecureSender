@@ -14,8 +14,12 @@
 #include <cstring>
 
 
+
 #define SALT_SIZE 32
 #define HASH_SIZE 64
+
+
+#include <mbedtls/pk.h>
 
 class Crypto
 {
@@ -42,6 +46,9 @@ public:
      * @param sha_result hash of string
      */
     void hash(unsigned char *string, unsigned char* sha_result);
+
+
+    int generateRSAKey(mbedtls_pk_context& rsa_ctx);
     
 };
 

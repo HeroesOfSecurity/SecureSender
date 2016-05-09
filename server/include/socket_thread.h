@@ -3,10 +3,12 @@
 
 #include <QObject>
 #include <QThread>
-#include <QTcpSocket>
+#include <QSslSocket>
 
 #include "dbhelper.h"
 #include <crypto.h>
+
+
 
 /**
  * @brief The SocketThread class
@@ -17,13 +19,16 @@ class SocketThread : public QThread
     Q_OBJECT
 
     qintptr sock_ptr;
-    QTcpSocket *socket;
+    QSslSocket *socket;
 
     DBHelper* dbHelper;
-    Crypto ps;
 
     std::string username;
     bool authenticated = false;
+
+    Crypto ps;
+
+
 
 public:
     explicit SocketThread(qintptr socket_ptr, DBHelper*& dbHelper, QObject *parent = 0);

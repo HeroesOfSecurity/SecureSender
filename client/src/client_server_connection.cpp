@@ -11,16 +11,23 @@
 #include <qt5/QtCore/QJsonDocument>
 #include <qt5/QtCore/QString>
 
+#include <mbedtls/entropy_poll.h>
+#include <mbedtls/entropy.h>
+#include <mbedtls/ctr_drbg.h>
+#include <mbedtls/pk.h>
+
 
 using namespace std;
 
 ClientServerConnection::ClientServerConnection(QObject *parent) {
-    server_soc = new QTcpSocket(this);
+    server_soc = new QSslSocket(this);
+    crypto = new Crypto();
 }
 
 
 ClientServerConnection::~ClientServerConnection(){
 }
+
 
 bool ClientServerConnection::connect_to_server()
 {
