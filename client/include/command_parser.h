@@ -4,7 +4,7 @@
 #include <qglobal.h>
 #include <iostream>
 #include <QThread>
-#include "include/client.h"   //PEKO
+#include "include/client.h"
 #include <string>
 #include <vector>
 #include <include/client_server_connection.h>
@@ -43,7 +43,7 @@ public:
         int cmd_idx;
         bool is_running = true;
 
-        std::cout << "supported commands -> [exit | logout | sign_up | sign_in | online_users | chat ]" << std::endl;
+        std::cout << "Supported commands -> exit, logout, sign_up, sign_in, online_users, chat" << std::endl;
         while (is_running) {
             std::cout << "Enter new command:";
             std::cin >> input_cmd;
